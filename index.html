@@ -145,9 +145,33 @@
       
 
 
+  <div class="widget-wrap">
+    <div class="widget">
+      <h3 class="widget-title">Categories</h3>
+      <div class="category-box">
+            <a class="category-link" href="/categories/LLM/">
+                LLM
+                <div class="category-count">1</div>
+            </a>
+        
+            <a class="category-link" href="/categories/OI/">
+                OI
+                <div class="category-count">4</div>
+            </a>
+        </div>
+    </div>
+  </div>
+
 
     
       
+  <div class="widget-wrap">
+    <div class="widget">
+      <h3 class="widget-title">Tags</h3>
+      <ul class="widget-tag-list" itemprop="keywords"><li class="widget-tag-list-item"><a class="widget-tag-list-link" href="/tags/LLM/" rel="tag">LLM</a></li><li class="widget-tag-list-item"><a class="widget-tag-list-link" href="/tags/%E9%9D%A2%E7%BB%8F/" rel="tag">面经</a></li></ul>
+    </div>
+  </div>
+
 
     
   </div>
@@ -158,7 +182,7 @@
    
 
 
-<article id="post-hello-world" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+<article id="post-llm_interview_note/1-1-1" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
    
   <div class="article-inner">
     <div class="article-main">
@@ -169,7 +193,7 @@
   
     
       <h1 itemprop="name">
-        <a class="p-name article-title" href="/2025/12/21/hello-world/">Hello World</a>
+        <a class="p-name article-title" href="/2025/12/21/llm_interview_note/1-1-1/">1.1.1 语言模型</a>
       </h1>
     
   
@@ -177,41 +201,35 @@
 
         <div class='meta-info-bar'>
           <div class="meta-info">
-  <time class="dt-published" datetime="2025-12-20T16:16:24.826Z" itemprop="datePublished">2025-12-21</time>
+  <time class="dt-published" datetime="2025-12-20T18:00:42.000Z" itemprop="datePublished">2025-12-21</time>
 </div>
           <div class="need-seperator meta-info">
             <div class="meta-cate-flex">
   
-    Uncategorized 
+  <a class="meta-cate-link" href="/categories/LLM/">LLM</a>
    
 </div>
   
           </div>
           <div class="wordcount need-seperator meta-info">
-            367 words 
+            1.5k words 
           </div>
         </div>
         
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/LLM/" rel="tag">LLM</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E9%9D%A2%E7%BB%8F/" rel="tag">面经</a></li></ul>
+
       </header>
       <div class="e-content article-entry" itemprop="articleBody">
         
           <div class="truncate-text">
             
-              Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub.
-Quick Start
-Create a new post
-1$ hexo new &quot;My New Post&quot;
-More info: Writing
-Run server
-1$ hexo server
-More info: Server
-Generate static files
-1$ hexo generate
-More info: Generating
-Deploy to remote sites
-1$ hexo deploy
-More info: Deployment
-
+              语言模型
+语言模型，最初是在信息理论的背景下研究的。香农在信息论中引入了熵，用于衡量一段文本被压缩后的期望比特数；熵越小，代表文本的结构性越强，也即信息量越少，编码的长度也就越短。
+现在所认为的语言模型，被定义为一个文本序列的概率分布。假设有一个token列表 [v1, …, vn]，语言模型可以计算出其出现的概率 p(v1,⋯ ,vn)p(v_1,\cdots,v_n)p(v1​,⋯,vn​)。为了准确评估这一概率，语言模型需要具备强大的①语言能力与②世界知识。
+为了高效地计算这一概率，现代的语言模型通常被建模为自回归的形式
+p(a1...,an)=p(a1)⋅p(a2,...,an∣a1)=...p(a_1...,a_n)=p(a_1)\cdot p(a_2,...,a_n|a_1)=...p(a1​...,an​)=p(a1​)⋅p(a2​,...,an​∣a1​)=...
+语言模型不仅可以用于计算，还可以被用作文本的生成任务，这一任务同样可以采用自回归的形式实现（next token prediction）。
+对于一个自回归文本生成的任务，一个朴素的想法是直接采样出现概率...
             
           </div>
         
@@ -223,7 +241,7 @@ More info: Deployment
      
     <a class="right-panel  non-pic  "
       
-      href="/2025/12/21/hello-world/" 
+      href="/2025/12/21/llm_interview_note/1-1-1/" 
     >
        
       <i class="fa-solid fa-angle-right non-pic"></i>
@@ -242,7 +260,7 @@ More info: Deployment
    
 
 
-<article id="post-legacy_4" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+<article id="post-legacy/acwing206" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
    
   <div class="article-inner">
     <div class="article-main">
@@ -253,7 +271,7 @@ More info: Deployment
   
     
       <h1 itemprop="name">
-        <a class="p-name article-title" href="/2020/09/14/legacy_4/">[矩阵快速幂] AcWing 206 石头游戏</a>
+        <a class="p-name article-title" href="/2020/09/14/legacy/acwing206/">[矩阵快速幂] AcWing 206 石头游戏</a>
       </h1>
     
   
@@ -266,7 +284,7 @@ More info: Deployment
           <div class="need-seperator meta-info">
             <div class="meta-cate-flex">
   
-    Uncategorized 
+  <a class="meta-cate-link" href="/categories/OI/">OI</a>
    
 </div>
   
@@ -304,7 +322,7 @@ More info: Deployment
      
     <a class="right-panel  non-pic  "
       
-      href="/2020/09/14/legacy_4/" 
+      href="/2020/09/14/legacy/acwing206/" 
     >
        
       <i class="fa-solid fa-angle-right non-pic"></i>
@@ -323,7 +341,7 @@ More info: Deployment
    
 
 
-<article id="post-legacy_3" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+<article id="post-legacy/noip2007_dp" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
    
   <div class="article-inner">
     <div class="article-main">
@@ -334,7 +352,7 @@ More info: Deployment
   
     
       <h1 itemprop="name">
-        <a class="p-name article-title" href="/2020/08/08/legacy_3/">[NOIP2007] 矩阵取数游戏——区间dp+高精</a>
+        <a class="p-name article-title" href="/2020/08/08/legacy/noip2007_dp/">[NOIP2007] 矩阵取数游戏——区间dp+高精</a>
       </h1>
     
   
@@ -347,7 +365,7 @@ More info: Deployment
           <div class="need-seperator meta-info">
             <div class="meta-cate-flex">
   
-    Uncategorized 
+  <a class="meta-cate-link" href="/categories/OI/">OI</a>
    
 </div>
   
@@ -383,7 +401,7 @@ f[i][j]=max(f[i+1][j]+a[i+1]∗2m−l−1, f[i][j−1]+a[j−1]∗2m−l−1)
      
     <a class="right-panel  non-pic  "
       
-      href="/2020/08/08/legacy_3/" 
+      href="/2020/08/08/legacy/noip2007_dp/" 
     >
        
       <i class="fa-solid fa-angle-right non-pic"></i>
@@ -402,7 +420,7 @@ f[i][j]=max(f[i+1][j]+a[i+1]∗2m−l−1, f[i][j−1]+a[j−1]∗2m−l−1)
    
 
 
-<article id="post-legacy_2" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+<article id="post-legacy/log10151" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
    
   <div class="article-inner">
     <div class="article-main">
@@ -413,7 +431,7 @@ f[i][j]=max(f[i+1][j]+a[i+1]∗2m−l−1, f[i][j−1]+a[j−1]∗2m−l−1)
   
     
       <h1 itemprop="name">
-        <a class="p-name article-title" href="/2020/08/01/legacy_2/">loj 10151. 「一本通 5.1 练习 2」分离与合体</a>
+        <a class="p-name article-title" href="/2020/08/01/legacy/log10151/">loj 10151. 「一本通 5.1 练习 2」分离与合体</a>
       </h1>
     
   
@@ -426,7 +444,7 @@ f[i][j]=max(f[i+1][j]+a[i+1]∗2m−l−1, f[i][j−1]+a[j−1]∗2m−l−1)
           <div class="need-seperator meta-info">
             <div class="meta-cate-flex">
   
-    Uncategorized 
+  <a class="meta-cate-link" href="/categories/OI/">OI</a>
    
 </div>
   
@@ -479,7 +497,7 @@ pl,r=kp_{l,r} = kpl,r​=k
      
     <a class="right-panel  non-pic  "
       
-      href="/2020/08/01/legacy_2/" 
+      href="/2020/08/01/legacy/log10151/" 
     >
        
       <i class="fa-solid fa-angle-right non-pic"></i>
@@ -498,7 +516,7 @@ pl,r=kp_{l,r} = kpl,r​=k
    
 
 
-<article id="post-legacy_1" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+<article id="post-legacy/uva1347" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
    
   <div class="article-inner">
     <div class="article-main">
@@ -509,7 +527,7 @@ pl,r=kp_{l,r} = kpl,r​=k
   
     
       <h1 itemprop="name">
-        <a class="p-name article-title" href="/2020/08/01/legacy_1/">UVA1347 旅行</a>
+        <a class="p-name article-title" href="/2020/08/01/legacy/uva1347/">UVA1347 旅行</a>
       </h1>
     
   
@@ -522,7 +540,7 @@ pl,r=kp_{l,r} = kpl,r​=k
           <div class="need-seperator meta-info">
             <div class="meta-cate-flex">
   
-    Uncategorized 
+  <a class="meta-cate-link" href="/categories/OI/">OI</a>
    
 </div>
   
@@ -560,7 +578,7 @@ fj,j+1​=min(fj,j+1​,fi,j​+dis...
      
     <a class="right-panel  non-pic  "
       
-      href="/2020/08/01/legacy_1/" 
+      href="/2020/08/01/legacy/uva1347/" 
     >
        
       <i class="fa-solid fa-angle-right non-pic"></i>
