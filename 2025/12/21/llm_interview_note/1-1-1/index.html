@@ -126,6 +126,8 @@
   <div class="info-card">
     <div class="avatar">
       
+        <image src=/avatar.png></image>
+      
       <div class="img-dim"></div>
     </div>
     <div class="info">
@@ -133,10 +135,6 @@
       <div class="dot"></div>
       <div class="subtitle"> </div>
       <div class="link-list">
-        
-          <a class="link-btn" target="_blank" rel="noopener" href="https://twitter.com" title="Twitter"><i class="fa-brands fa-twitter"></i></a>
-        
-          <a class="link-btn" target="_blank" rel="noopener" href="https://store.steampowered.com" title="Steam"><i class="fa-brands fa-steam"></i></a>
         
           <a class="link-btn" target="_blank" rel="noopener" href="https://github.com/glerium" title="GitHub"><i class="fa-brands fa-github"></i></a>
          
@@ -155,14 +153,14 @@
     <div class="widget">
       <h3 class="widget-title">Categories</h3>
       <div class="category-box">
-            <a class="category-link" href="/categories/LLM/">
-                LLM
-                <div class="category-count">1</div>
-            </a>
-        
             <a class="category-link" href="/categories/OI/">
                 OI
                 <div class="category-count">4</div>
+            </a>
+        
+            <a class="category-link" href="/categories/LLM/">
+                LLM
+                <div class="category-count">1</div>
             </a>
         </div>
     </div>
@@ -297,6 +295,19 @@
   
 </article>
 
+
+  
+  <script src='//unpkg.com/valine/dist/Valine.min.js'></script>
+  <div id="comment-card" class="comment-card">
+    <div class="main-title-bar">
+      <div class="main-title-dot"></div>
+      <div class="main-title">Comments </div>
+    </div>
+    <div id="vcomments"></div>
+  </div>
+  <script>
+      new Valine({"enable":true,"appId":"Rur59HWI7LNJzlXQjglnaEWt-gzGzoHsz","appKey":"QTjPcyBPbOzS0nq025I2YFgO","placeholder":"Just go go","pageSize":10,"highlight":true,"serverURLs":null,"el":"#vcomments"});
+  </script>
 
 
 
