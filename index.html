@@ -188,6 +188,11 @@
                 LLM
                 <div class="category-count">1</div>
             </a>
+        
+            <a class="category-link" href="/categories/%E8%AE%BA%E6%96%87%E7%AC%94%E8%AE%B0/">
+                论文笔记
+                <div class="category-count">2</div>
+            </a>
         </div>
     </div>
   </div>
@@ -272,6 +277,245 @@ p(a1...,an)=p(a1)⋅p(a2,...,an∣a1)=...p(a_1...,a_n)=p(a_1)\cdot p(a_2,...,a_n
     <a class="right-panel  non-pic  "
       
       href="/2025/12/21/llm_interview_note/1-1-1/" 
+    >
+       
+      <i class="fa-solid fa-angle-right non-pic"></i>
+       
+    </a>
+     
+  </div>
+  
+</article>
+
+
+
+
+
+
+   
+
+
+<article id="blog-paper_notes/gpt1" class="h-entry article article-type-blog" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+   
+  <div class="article-inner">
+    <div class="article-main">
+      <header class="article-header">
+        
+<div class="main-title-bar">
+  <div class="main-title-dot"></div>
+  
+    
+      <h1 itemprop="name">
+        <a class="p-name article-title" href="/2025/07/18/paper_notes/gpt1/">[论文笔记] Improving Language Understanding by Generative Pre-Training (GPT-1)</a>
+      </h1>
+    
+  
+</div>
+
+        <div class='meta-info-bar'>
+          <div class="meta-info">
+  <time class="dt-published" datetime="2025-07-17T16:00:00.000Z" itemprop="datePublished">2025-07-18</time>
+</div>
+          <div class="need-seperator meta-info">
+            <div class="meta-cate-flex">
+  
+  <a class="meta-cate-link" href="/categories/%E8%AE%BA%E6%96%87%E7%AC%94%E8%AE%B0/">论文笔记</a>
+   
+</div>
+  
+          </div>
+          <div class="wordcount need-seperator meta-info">
+            548 词 
+          </div>
+        </div>
+        
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/LLM/" rel="tag">LLM</a></li></ul>
+
+      </header>
+      <div class="e-content article-entry" itemprop="articleBody">
+        
+          <div class="truncate-text">
+            
+              研究背景
+
+
+现实生活中无标签的文本数据远多于带标签的数据
+
+
+现有的许多模型依赖于大量任务特定的、带标签的数据进行训练，十分费时费力
+
+
+无监督的方式需要考虑两大问题：
+
+
+在pretrain时采用什么任务对提取知识最有效果（解决方法：生成式任务）
+
+
+如何将无监督中学习的知识应用到下游任务上（解决方法：minimal change to structure during finetuning）
+
+
+
+
+
+
+亮点
+
+
+对于不同任务而言，GPT-1的模型架构是统一的，微调时对架构的更改很少
+
+
+在9 of 12个任务上取得了SOTA
+
+
+证明了在多个任务上，基于广泛无标签语料的生成式预训练可以提升模型效果
+
+
+方法
+
+
+模型架构：12层的Transformer decoder-only架构
+
+
+预训练阶段：h = transformer(x), y=We(h)y = W_e(h)y=We​(h)
+
+
+微调阶段：h = transformer(x), y=Wy(h)y = W_y(h)y=Wy​(h)
+
+
+这样在微调阶段，只需要训练 WyW_yWy​ 矩阵即可
+
+
+
+
+预训练阶段
+...
+            
+          </div>
+        
+      </div>
+
+         
+    </div>
+    
+     
+    <a class="right-panel  non-pic  "
+      
+      href="/2025/07/18/paper_notes/gpt1/" 
+    >
+       
+      <i class="fa-solid fa-angle-right non-pic"></i>
+       
+    </a>
+     
+  </div>
+  
+</article>
+
+
+
+
+
+
+   
+
+
+<article id="blog-paper_notes/gpt2" class="h-entry article article-type-blog" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+   
+  <div class="article-inner">
+    <div class="article-main">
+      <header class="article-header">
+        
+<div class="main-title-bar">
+  <div class="main-title-dot"></div>
+  
+    
+      <h1 itemprop="name">
+        <a class="p-name article-title" href="/2025/07/17/paper_notes/gpt2/">[论文笔记] Language Models are Unsupervised Multitask Learners (GPT-2)</a>
+      </h1>
+    
+  
+</div>
+
+        <div class='meta-info-bar'>
+          <div class="meta-info">
+  <time class="dt-published" datetime="2025-07-16T16:00:00.000Z" itemprop="datePublished">2025-07-17</time>
+</div>
+          <div class="need-seperator meta-info">
+            <div class="meta-cate-flex">
+  
+  <a class="meta-cate-link" href="/categories/%E8%AE%BA%E6%96%87%E7%AC%94%E8%AE%B0/">论文笔记</a>
+   
+</div>
+  
+          </div>
+          <div class="wordcount need-seperator meta-info">
+            597 词 
+          </div>
+        </div>
+        
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/LLM/" rel="tag">LLM</a></li></ul>
+
+      </header>
+      <div class="e-content article-entry" itemprop="articleBody">
+        
+          <div class="truncate-text">
+            
+              背景
+
+
+现有的模型大多基于较小的语料，而且是针对特定任务的
+
+
+从meta-learning的角度来看，multi-task learning需要相当多的 (task, dataset) 组合作为train sample，这是不现实的
+
+
+创新点
+
+
+提出了一个更大的LM架构，包含三种大小：GPT-1、BERT、GPT-2
+
+
+提出了一个LM语料库，从Reddit的优质贴外链汇总得到
+
+为了避免train set和test set重叠，删除了Wikipedia的网页
+
+
+
+仅在大型语料库采用pretrain的情况下，发现模型能天然地适配于各种任务，而无需微调
+
+一个无监督的模型在许多任务上取得了SOTA效果
+
+
+
+证明了基于极大似然估计的语言模型能够拟合现实任务
+
+
+缺点
+
+在部分任务上，GPT-2的定量性能依然较差，不具备现实应用的能力
+
+架构
+
+
+大致与GPT-1相同，但有几点改进
+
+
+Layer normalization从post-norm改为了pre-norm，这样可以提高训练的稳定性
+
+
+每一层的initialization参数都进行了缩放，变为先前的 1/sqrt...
+            
+          </div>
+        
+      </div>
+
+         
+    </div>
+    
+     
+    <a class="right-panel  non-pic  "
+      
+      href="/2025/07/17/paper_notes/gpt2/" 
     >
        
       <i class="fa-solid fa-angle-right non-pic"></i>
