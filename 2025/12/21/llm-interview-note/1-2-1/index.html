@@ -56,7 +56,7 @@
 <meta property="og:description" content="本文为 LLMs Interview Note 的学习笔记。 概念 分词是语言模型的基础。分词的质量直接关系着词性标注、句法分析等后续环节，也有语言模型的效果密切相关。英语以空格为天然的分词符，相比之下中文的分词则更加复杂，需要引入专门的分词算法。 对中文进行分词是一项复杂的任务，其难点主要可以总结为三个方面：分词标准、切分歧义与未登录词。   分词标准：不同方法的分词标准不同，例如对于姓名，有的">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2025-12-21T13:01:07.000Z">
-<meta property="article:modified_time" content="2025-12-21T13:02:20.020Z">
+<meta property="article:modified_time" content="2025-12-21T13:24:10.144Z">
 <meta property="article:author" content="glerium">
 <meta property="article:tag" content="LLM">
 <meta name="twitter:card" content="summary">
@@ -265,13 +265,13 @@
           <p><em><strong>本文为 <a target="_blank" rel="noopener" href="https://github.com/wdndev/llm_interview_note">LLMs Interview Note</a> 的学习笔记。</strong></em></p>
 <h2 id="概念">概念</h2>
 <p>分词是语言模型的基础。分词的质量直接关系着词性标注、句法分析等后续环节，也有语言模型的效果密切相关。英语以空格为天然的分词符，相比之下中文的分词则更加复杂，需要引入专门的分词算法。</p>
-<p>对中文进行分词是一项复杂的任务，其难点主要可以总结为三个方面：分词标准、切分歧义与未登录词。</p>
+<p>对中文进行分词是一项复杂的任务，其难点主要可以总结为三个方面：<strong>分词标准</strong>、<strong>切分歧义</strong>与<strong>未登录词</strong>。</p>
 <ul>
 <li>
-<p>分词标准：不同方法的分词标准不同，例如对于姓名，有的方法认为应该分成姓+名两个词，而有的方法认为只需要分成一个词语</p>
+<p><strong>分词标准</strong>：不同方法的分词标准不同，例如对于姓名，有的方法认为应该分成姓+名两个词，而有的方法认为只需要分成一个词语</p>
 </li>
 <li>
-<p>切分歧义</p>
+<p><strong>切分歧义</strong></p>
 <ul>
 <li>
 <p>组合型歧义：一个词可以拆分为两个不同词的情况，如“将来”中的“将”和“来”都是单独的词，此时分词结果与上下文有关。</p>
@@ -285,7 +285,7 @@
 </ul>
 </li>
 <li>
-<p>未登录词：比如网络新词、专有名词、领域词汇等；未登录词对分词精度的影响极大，识别难度也很大。</p>
+<p><strong>未登录词</strong>：比如网络新词、专有名词、领域词汇等；未登录词对分词精度的影响极大，识别难度也很大。</p>
 </li>
 </ul>
 <h2 id="中文分词算法">中文分词算法</h2>
