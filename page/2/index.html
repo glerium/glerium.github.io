@@ -41,7 +41,7 @@
 
 
   
-  <title>Tag: LLM | Glerium&#39;s Blog</title>
+  <title>Glerium&#39;s Blog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
   <link rel="preload" href="/css/fonts/Roboto-Regular.ttf" as="font" type="font/ttf" crossorigin="anonymous">
@@ -50,7 +50,7 @@
 
   <meta property="og:type" content="website">
 <meta property="og:title" content="Glerium&#39;s Blog">
-<meta property="og:url" content="https://glerium.github.io/tags/LLM/index.html">
+<meta property="og:url" content="https://glerium.github.io/page/2/index.html">
 <meta property="og:site_name" content="Glerium&#39;s Blog">
 <meta property="og:locale">
 <meta property="article:author" content="glerium">
@@ -81,7 +81,7 @@
   
    
   <div id="main-grid" class="  ">
-    <div id="nav" class=""  >
+    <div id="nav" class=" is_home "  >
       <navbar id="navbar">
   <nav id="title-nav">
     <a href="/">
@@ -213,84 +213,105 @@
 </sidebar>
     </div>
     <div id="content-body">
-       
+      
+   
 
-<div class="archive-main-card">
-    <div class="archive-top">
-      <div class="main-title-bar">
-        <div class="main-title-dot"></div>
-        <h1 class="article-title">Archives</h1>
-      </div>    
+
+<article id="post-legacy/uva1347" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+   
+  <div class="article-inner">
+    <div class="article-main">
+      <header class="article-header">
+        
+<div class="main-title-bar">
+  <div class="main-title-dot"></div>
+  
+    
+      <h1 itemprop="name">
+        <a class="p-name article-title" href="/2020/08/01/legacy/uva1347/">UVA1347 旅行</a>
+      </h1>
+    
+  
+</div>
+
+        <div class='meta-info-bar'>
+          <div class="meta-info">
+  <time class="dt-published" datetime="2020-08-01T02:30:00.000Z" itemprop="datePublished">2020-08-01</time>
+</div>
+          <div class="need-seperator meta-info">
+            <div class="meta-cate-flex">
+  
+  <a class="meta-cate-link" href="/categories/OI/">OI</a>
+   
+</div>
+  
+          </div>
+          <div class="wordcount need-seperator meta-info">
+            1.7k words 
+          </div>
+        </div>
+        
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92/" rel="tag">动态规划</a></li></ul>
+
+      </header>
+      <div class="e-content article-entry" itemprop="articleBody">
+        
+          <div class="truncate-text">
+            
+              UVA1347 旅行
+题目大意
+给定 nnn 个点 (xi,yi)(x_i,y_i)(xi​,yi​)，从最左边的点出发到达最右边，再返回最左边，要求经过的点不重复且覆盖所有的点，求最小路径长（两点的距离定义为欧几里得距离）
+思路：动态规划
+题目要求从左到右再到左的路径长，可以转化成两个人同时从左边出发向右走，且路径不重叠。
+这样就可以确定状态
+fi,j (i&gt;j)f_{i,j} \ (i &gt; j)fi,j​ (i&gt;j)，表示其中一个人走到 iii 点，另一个人走到了 jjj 点时的最短路径和。
+于是便有了状态转移方程：
+fi,j+1=min⁡(fi,j+1,fi,j+disj,j+1)f_{i,j+1}=\min(f_{i,j+1},f_{i,j}+dis_{j,j+1})
+fi,j+1​=min(fi,j+1​,fi,j​+disj,j+1​)
+fj,j+1=min⁡(fj,j+1,fi,j+disi,j+1)f_{j,j+1}=\min(f_{j,j+1},f_{i,j}+dis_{i,j+1})
+fj,j+1​=min(fj,j+1​,fi,j​+dis...
+            
+          </div>
+        
+      </div>
+
+         
     </div>
     
-    
+     
+    <a class="right-panel  non-pic  "
       
-      
-        
-        <div class="year-line">
-            <div class="year-num">2025</div>
-            <div class="dot-wrapper">
-                <div class="dot"></div>
-            </div>
-            <div class="article-count">3 articles</div>
-        </div>
-      
-      <a class="archive-article-link" href="/2025/12/21/llm-interview-note/1-1-1/" title="1.1.1 语言模型">
-        <div class="date">12-21</div>
-        <div class="line">
-            <div class="dot"></div>
-        </div>
-        <div class="title">
-            <div class="title-inner">
-                
-                    1.1.1 语言模型
-                
-            </div>
-        </div>
-        <div class="tags">
-            #LLM #面经
-        </div>
-      </a>
-    
-      
-      
-      <a class="archive-article-link" href="/2025/07/18/paper-notes/gpt1/" title="[论文笔记] Improving Language Understanding by Generative Pre-Training (GPT-1)">
-        <div class="date">07-18</div>
-        <div class="line">
-            <div class="dot"></div>
-        </div>
-        <div class="title">
-            <div class="title-inner">
-                
-                    [论文笔记] Improving Language Understanding by Generative Pre-Training (GPT-1)
-                
-            </div>
-        </div>
-        <div class="tags">
-            #LLM
-        </div>
-      </a>
-    
-      
-      
-      <a class="archive-article-link" href="/2025/07/17/paper-notes/gpt2/" title="[论文笔记] Language Models are Unsupervised Multitask Learners (GPT-2)">
-        <div class="date">07-17</div>
-        <div class="line">
-            <div class="dot"></div>
-        </div>
-        <div class="title">
-            <div class="title-inner">
-                
-                    [论文笔记] Language Models are Unsupervised Multitask Learners (GPT-2)
-                
-            </div>
-        </div>
-        <div class="tags">
-            #LLM
-        </div>
-      </a>
-    
+      href="/2020/08/01/legacy/uva1347/" 
+    >
+       
+      <i class="fa-solid fa-angle-right non-pic"></i>
+       
+    </a>
+     
   </div>
+  
+</article>
+
+
+
+
+
+
+
+  <nav id="page-nav">
+    <!-- 在第二页时 page.prev_link 不知为何无法返回正确的链接 -->
+    <a id="prev-btn" class="page-nav-btn " href=" /  ">
+      <i class="fa-solid fa-angle-left"></i>
+    </a>
+    <div id="num-bar">
+      <a class="page-number" href="/">1</a><span class="page-number current">2</span>  
+    </div>
+    <a id="next-btn" class="page-nav-btn disabled" href="/">
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+  </nav>
+
+
     </div>
     <div id="footer-wrapper">
       <footer id="footer">
