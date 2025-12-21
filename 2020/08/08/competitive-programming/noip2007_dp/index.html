@@ -51,12 +51,12 @@
   <meta name="description" content="[NOIP2007] 矩阵取数游戏  题目链接 思路：区间dp+高精 发现每行答案分别独立，于是考虑分行做区间dp，最终把每行的答案相加。 状态转移方程（对每一行，l为区间长度）： f[i][j]&#x3D;max⁡(f[i+1][j]+a[i+1]∗2m−l−1, f[i][j−1]+a[j−1]∗2m−l−1)f[i][j]&#x3D;\max(f[i+1][j]+a[i+1]*2^{m-l-1},~f[i][j">
 <meta property="og:type" content="article">
 <meta property="og:title" content="[NOIP2007] 矩阵取数游戏——区间dp+高精">
-<meta property="og:url" content="https://glerium.github.io/2020/08/08/legacy/noip2007_dp/index.html">
+<meta property="og:url" content="https://glerium.github.io/2020/08/08/competitive-programming/noip2007_dp/index.html">
 <meta property="og:site_name" content="Glerium&#39;s Blog">
 <meta property="og:description" content="[NOIP2007] 矩阵取数游戏  题目链接 思路：区间dp+高精 发现每行答案分别独立，于是考虑分行做区间dp，最终把每行的答案相加。 状态转移方程（对每一行，l为区间长度）： f[i][j]&#x3D;max⁡(f[i+1][j]+a[i+1]∗2m−l−1, f[i][j−1]+a[j−1]∗2m−l−1)f[i][j]&#x3D;\max(f[i+1][j]+a[i+1]*2^{m-l-1},~f[i][j">
 <meta property="og:locale">
 <meta property="article:published_time" content="2020-08-07T18:24:00.000Z">
-<meta property="article:modified_time" content="2025-12-21T08:54:25.445Z">
+<meta property="article:modified_time" content="2025-12-21T11:13:38.311Z">
 <meta property="article:author" content="glerium">
 <meta property="article:tag" content="动态规划">
 <meta name="twitter:card" content="summary">
@@ -177,21 +177,21 @@
 
   <div class="widget-wrap">
     <div class="widget">
-      <h3 class="widget-title">Categories</h3>
+      <h3 class="widget-title">分類</h3>
       <div class="category-box">
-            <a class="category-link" href="/categories/%E8%AF%BE%E7%A8%8B%E7%AC%94%E8%AE%B0/">
-                课程笔记
-                <div class="category-count">3</div>
-            </a>
-        
-            <a class="category-link" href="/categories/OI/">
-                OI
+            <a class="category-link" href="/categories/%E7%AE%97%E6%B3%95%E7%AB%9E%E8%B5%9B/">
+                算法竞赛
                 <div class="category-count">4</div>
             </a>
         
             <a class="category-link" href="/categories/LLM/">
                 LLM
                 <div class="category-count">1</div>
+            </a>
+        
+            <a class="category-link" href="/categories/%E8%AF%BE%E7%A8%8B%E7%AC%94%E8%AE%B0/">
+                课程笔记
+                <div class="category-count">5</div>
             </a>
         
             <a class="category-link" href="/categories/%E8%AE%BA%E6%96%87%E7%AC%94%E8%AE%B0/">
@@ -207,8 +207,8 @@
       
   <div class="widget-wrap">
     <div class="widget">
-      <h3 class="widget-title">Tags</h3>
-      <ul class="widget-tag-list" itemprop="keywords"><li class="widget-tag-list-item"><a class="widget-tag-list-link" href="/tags/DNA%E7%94%B2%E5%9F%BA%E5%8C%96/" rel="tag">DNA甲基化</a></li><li class="widget-tag-list-item"><a class="widget-tag-list-link" href="/tags/LLM/" rel="tag">LLM</a></li><li class="widget-tag-list-item"><a class="widget-tag-list-link" href="/tags/%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92/" rel="tag">动态规划</a></li><li class="widget-tag-list-item"><a class="widget-tag-list-link" href="/tags/%E6%95%B0%E5%AD%A6/" rel="tag">数学</a></li><li class="widget-tag-list-item"><a class="widget-tag-list-link" href="/tags/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/" rel="tag">机器学习</a></li><li class="widget-tag-list-item"><a class="widget-tag-list-link" href="/tags/%E9%9D%A2%E7%BB%8F/" rel="tag">面经</a></li></ul>
+      <h3 class="widget-title">標籤</h3>
+      <ul class="widget-tag-list" itemprop="keywords"><li class="widget-tag-list-item"><a class="widget-tag-list-link" href="/tags/DNA%E7%94%B2%E5%9F%BA%E5%8C%96/" rel="tag">DNA甲基化</a></li><li class="widget-tag-list-item"><a class="widget-tag-list-link" href="/tags/LLM/" rel="tag">LLM</a></li><li class="widget-tag-list-item"><a class="widget-tag-list-link" href="/tags/%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92/" rel="tag">动态规划</a></li><li class="widget-tag-list-item"><a class="widget-tag-list-link" href="/tags/%E6%95%B0%E5%AD%A6/" rel="tag">数学</a></li><li class="widget-tag-list-item"><a class="widget-tag-list-link" href="/tags/%E6%95%B0%E7%90%86%E7%BB%9F%E8%AE%A1/" rel="tag">数理统计</a></li><li class="widget-tag-list-item"><a class="widget-tag-list-link" href="/tags/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/" rel="tag">机器学习</a></li><li class="widget-tag-list-item"><a class="widget-tag-list-link" href="/tags/%E9%9D%A2%E7%BB%8F/" rel="tag">面经</a></li></ul>
     </div>
   </div>
 
@@ -221,7 +221,7 @@
        
 
 
-<article id="post-legacy/noip2007_dp" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+<article id="post-competitive-programming/noip2007_dp" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
   
     
    
@@ -247,13 +247,13 @@
           <div class="need-seperator meta-info">
             <div class="meta-cate-flex">
   
-  <a class="meta-cate-link" href="/categories/OI/">OI</a>
+  <a class="meta-cate-link" href="/categories/%E7%AE%97%E6%B3%95%E7%AB%9E%E8%B5%9B/">算法竞赛</a>
    
 </div>
   
           </div>
           <div class="wordcount need-seperator meta-info">
-            2.1k words 
+            2.1k 詞 
           </div>
         </div>
         
@@ -286,7 +286,7 @@
 <nav id="article-nav">
   <a class="article-nav-btn left "
     
-      href="/2020/09/14/legacy/acwing206/"
+      href="/2020/09/14/competitive-programming/acwing206/"
       title="[矩阵快速幂] AcWing 206 石头游戏"
      >
     <i class="fa-solid fa-angle-left"></i>
@@ -298,7 +298,7 @@
   </a>
   <a class="article-nav-btn right "
     
-      href="/2020/08/01/legacy/log10151/"
+      href="/2020/08/01/competitive-programming/log10151/"
       title="loj 10151. 「一本通 5.1 练习 2」分离与合体"
      >
 
@@ -321,7 +321,7 @@
   <div id="comment-card" class="comment-card">
     <div class="main-title-bar">
       <div class="main-title-dot"></div>
-      <div class="main-title">Comments </div>
+      <div class="main-title">留言 </div>
     </div>
     <div id="vcomments"></div>
   </div>
