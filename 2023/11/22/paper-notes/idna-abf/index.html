@@ -47,6 +47,7 @@
   <link rel="preload" href="/css/fonts/Roboto-Regular.ttf" as="font" type="font/ttf" crossorigin="anonymous">
   <link rel="preload" href="/css/fonts/Roboto-Bold.ttf" as="font" type="font/ttf" crossorigin="anonymous">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex/dist/katex.min.css" />
+  <meta name="google-site-verification" content="vQvmfVLpkyuFa1L0s5rTR6LDX0OS5FL2lPE0EykmpuY" />
 
   <meta name="description" content="Method 给定一组固定长度的DNA序列，进行有无甲基化的预测，输出一个binary概率  网络架构：   从3mers和6mers两个角度对序列进行tokenize，分别进两个dnabert预训练模型，输出两个features：F1和F2   对F1和F2进行特征融合（加权平均，权值是可学习的参数）   融合后的features进全连接层做二分类   可解释性   从多个数据集的ACC Rec">
 <meta property="og:type" content="article">
