@@ -6,9 +6,9 @@ https://glerium.github.io/2024/05/27/math/mathematical-statistics/
 https://glerium.github.io/2024/06/18/math/machine-learning/
 https://glerium.github.io/2024/04/27/math/anova-vs-f-distribution/
 https://glerium.github.io/2020/09/14/competitive-programming/acwing206/
-https://glerium.github.io/2020/08/01/competitive-programming/log10151/
 https://glerium.github.io/2020/08/08/competitive-programming/noip2007_dp/
 https://glerium.github.io/2020/08/01/competitive-programming/uva1347/
+https://glerium.github.io/2020/08/01/competitive-programming/log10151/
 https://glerium.github.io/2023/11/22/paper-notes/idna-abf/
 https://glerium.github.io/2025/07/17/paper-notes/gpt2/
 https://glerium.github.io/2025/07/18/paper-notes/gpt1/
@@ -21,6 +21,6 @@ https://glerium.github.io/tags/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/
 https://glerium.github.io/tags/%E6%95%B0%E5%AD%A6/
 https://glerium.github.io/tags/DNA%E7%94%B2%E5%9F%BA%E5%8C%96/
 https://glerium.github.io/categories/%E7%AE%97%E6%B3%95%E7%AB%9E%E8%B5%9B/
+https://glerium.github.io/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/
 https://glerium.github.io/categories/%E8%AF%BE%E7%A8%8B%E7%AC%94%E8%AE%B0/
 https://glerium.github.io/categories/%E8%AE%BA%E6%96%87%E7%AC%94%E8%AE%B0/
-https://glerium.github.io/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/
