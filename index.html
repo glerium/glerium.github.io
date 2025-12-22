@@ -192,7 +192,7 @@
         
             <a class="category-link" href="/categories/%E8%AE%BA%E6%96%87%E7%AC%94%E8%AE%B0/">
                 论文笔记
-                <div class="category-count">3</div>
+                <div class="category-count">4</div>
             </a>
         </div>
     </div>
@@ -379,6 +379,126 @@ p(a1​...,an​)=p(a1​)⋅p(a2​,...,an​∣a1​)=...
     <a class="right-panel  non-pic  "
       
       href="/2025/12/20/llm-interview-note/1-1-1/" 
+    >
+       
+      <i class="fa-solid fa-angle-right non-pic"></i>
+       
+    </a>
+     
+  </div>
+  
+</article>
+
+
+
+
+
+
+   
+
+
+<article id="post-paper-notes/multimodal-token-compression" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+   
+  <div class="article-inner">
+    <div class="article-main">
+      <header class="article-header">
+        
+<div class="main-title-bar">
+  <div class="main-title-dot"></div>
+  
+    
+      <h1 itemprop="name">
+        <a class="p-name article-title" href="/2025/12/14/paper-notes/multimodal-token-compression/">[论文笔记] When Tokens Talk Too Much: A Survey of  Multimodal Long-Context Token Compression  across Images, Videos, and Audios</a>
+      </h1>
+    
+  
+</div>
+
+        <div class='meta-info-bar'>
+          <div class="meta-info">
+  <time class="dt-published" datetime="2025-12-14T14:08:30.000Z" itemprop="datePublished">2025-12-14</time>
+</div>
+          <div class="need-seperator meta-info">
+            <div class="meta-cate-flex">
+  
+  <a class="meta-cate-link" href="/categories/%E8%AE%BA%E6%96%87%E7%AC%94%E8%AE%B0/">论文笔记</a>
+   
+</div>
+  
+          </div>
+          <div class="wordcount need-seperator meta-info">
+            606 词 
+          </div>
+        </div>
+        
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/LLM/" rel="tag">LLM</a></li></ul>
+
+      </header>
+      <div class="e-content article-entry" itemprop="articleBody">
+        
+          <div class="truncate-text">
+            
+              Token压缩的动机
+
+
+self-attention二次方复杂度带来的计算挑战 → 加速推理和减少内存消耗
+
+在MLLM中更加明显，visual / audio数据的token数量比纯文本高几个数量级
+
+
+
+
+为什么有效
+多模态数据中有大量信息冗余（图片：相邻像素；视频：周围的重复帧；音频：相近时间与相近频谱之间的冗余）
+例如，高分辨率图像包含很强的局部相关性，而视频流在帧之间具有广泛的时空冗余，音频信号通常包含扩展的静默段或平稳噪声。
+优势
+
+
+加速推理，减少内存消耗
+
+
+作为后训练方法，无需重新训练模型
+
+
+现有方法分类
+
+
+基于模态分类：image-centric, video-centric, audio-centric
+
+
+基于机制分类：
+
+
+transformation-based：快速，但压缩效果通常一般（~25%）
+
+
+pixel-shuffle (training-free)
+
+
+pooling / interpolation (training-free)
+
+
+convolution
+
+
+
+
+similarity-based：较为灵活，但可能丢失信息
+
+
+a...
+            
+          </div>
+        
+      </div>
+
+         
+    </div>
+    
+     
+    <a class="right-panel  non-pic  "
+      
+      href="/2025/12/14/paper-notes/multimodal-token-compression/" 
     >
        
       <i class="fa-solid fa-angle-right non-pic"></i>
@@ -1200,115 +1320,6 @@ Var(g^(X))≥(g′(θ))2IX(θ)Var(\hat{g}(X)) \ge \frac{(g^{&#x27;}(\theta))^2}{
     <a class="right-panel  non-pic  "
       
       href="/2024/04/27/math/anova-vs-f-distribution/" 
-    >
-       
-      <i class="fa-solid fa-angle-right non-pic"></i>
-       
-    </a>
-     
-  </div>
-  
-</article>
-
-
-
-
-
-
-   
-
-
-<article id="post-paper-notes/idna-abf" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
-   
-  <div class="article-inner">
-    <div class="article-main">
-      <header class="article-header">
-        
-<div class="main-title-bar">
-  <div class="main-title-dot"></div>
-  
-    
-      <h1 itemprop="name">
-        <a class="p-name article-title" href="/2023/11/22/paper-notes/idna-abf/">[论文笔记] iDNA-ABF: multi-scale deep biological language learning model for the interpretable prediction of DNA methylations</a>
-      </h1>
-    
-  
-</div>
-
-        <div class='meta-info-bar'>
-          <div class="meta-info">
-  <time class="dt-published" datetime="2023-11-22T03:00:50.000Z" itemprop="datePublished">2023-11-22</time>
-</div>
-          <div class="need-seperator meta-info">
-            <div class="meta-cate-flex">
-  
-  <a class="meta-cate-link" href="/categories/%E8%AE%BA%E6%96%87%E7%AC%94%E8%AE%B0/">论文笔记</a>
-   
-</div>
-  
-          </div>
-          <div class="wordcount need-seperator meta-info">
-            592 词 
-          </div>
-        </div>
-        
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/DNA%E7%94%B2%E5%9F%BA%E5%8C%96/" rel="tag">DNA甲基化</a></li></ul>
-
-      </header>
-      <div class="e-content article-entry" itemprop="articleBody">
-        
-          <div class="truncate-text">
-            
-              Method
-给定一组固定长度的DNA序列，进行有无甲基化的预测，输出一个binary概率
-
-网络架构：
-
-
-从3mers和6mers两个角度对序列进行tokenize，分别进两个dnabert预训练模型，输出两个features：F1和F2
-
-
-对F1和F2进行特征融合（加权平均，权值是可学习的参数）
-
-
-融合后的features进全连接层做二分类
-
-
-可解释性
-
-
-从多个数据集的ACC Recall Precicion AUC MCC角度，对不同模型进行对比
-
-
-采用Uniform Manifold Approximation and Projection (UMAP)对不同模型对DNA序列的聚类结果进行可视化，和其他模型进行对比
-
-
-
-
-跨物种对比Accuracy，反映进化路径相似的物种之间甲基化结构的相似性
-
-
-
-cross-species validation，用一个物种训练，另一个物种预测，反映出的结论和上条类似
-
-
-
-
-用attention map反映出不同k-mers在特征提取中的差异性，以此证明采用3mers+6mers构建模型能提取到更多信息。
-
-3mers特...
-            
-          </div>
-        
-      </div>
-
-         
-    </div>
-    
-     
-    <a class="right-panel  non-pic  "
-      
-      href="/2023/11/22/paper-notes/idna-abf/" 
     >
        
       <i class="fa-solid fa-angle-right non-pic"></i>
