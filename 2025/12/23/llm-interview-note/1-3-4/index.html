@@ -57,7 +57,7 @@
 <meta property="og:description" content="本文为 LLMs Interview Note 的学习笔记。 Transformer 模型包括 Encoder 和 Decoder 两部分。在设计上，Encoder 在提取一个 token 对应信息的时候可以看到整个序列中的所有 token，而 Decoder 只能看到其前面的所有 token。 现代的大模型主要有以下几种架构：   以BERT为代表的 Encoder-only   以 T5 和">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2025-12-23T13:28:02.000Z">
-<meta property="article:modified_time" content="2025-12-23T13:32:58.850Z">
+<meta property="article:modified_time" content="2025-12-23T13:47:34.666Z">
 <meta property="article:author" content="glerium">
 <meta property="article:tag" content="LLM">
 <meta name="twitter:card" content="summary">
@@ -254,7 +254,7 @@
   
           </div>
           <div class="wordcount need-seperator meta-info">
-            882 词 
+            874 词 
           </div>
         </div>
         
@@ -280,7 +280,7 @@
 <p>不过目前的大模型主要以 Decoder-only 架构偏多，原因主要有以下几条：</p>
 <ol>
 <li>
-<p>Encoder-Decoder 中的低秩问题。Encoder 的 self-attention 不使用 casual mask，每个 token 都能看到其他所有 token，注意力矩阵容易退化成低秩的形式，进而弱化语言模型的表达能力。而 decoder 通常采用 casual attention（因果注意力），其 attention 矩阵是一个下三角矩阵，一定是满秩的，建模能力更强。</p>
+<p>Encoder 中的低秩问题。Encoder 的 self-attention 不使用 casual mask，每个 token 都能看到其他所有 token，注意力矩阵容易退化成低秩的形式，进而弱化语言模型的表达能力。而 decoder 通常采用 casual attention（因果注意力），其 attention 矩阵是一个下三角矩阵，一定是满秩的，建模能力更强。</p>
 </li>
 <li>
 <p>预训练任务的难度。Decoder-only 模型在训练时由于只能看到前缀的所有 token，看不到下文，在这种情况下进行 next token prediction 的难度更高。可以感性地认为，当模型足够大，数据量足够高的时候，这种训练的方法能为 LLM 带来更高的能力上限。</p>

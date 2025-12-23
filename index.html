@@ -248,7 +248,7 @@
   
           </div>
           <div class="wordcount need-seperator meta-info">
-            882 词 
+            874 词 
           </div>
         </div>
         
@@ -276,10 +276,10 @@ Transformer 模型包括 Encoder 和 Decoder 两部分。在设计上，Encoder 
 不过目前的大模型主要以 Decoder-only 架构偏多，原因主要有以下几条：
 
 
-Encoder-Decoder 中的低秩问题。Encoder 的 self-attention 不使用 casual mask，每个 token 都能看到其他所有 token，注意力矩阵容易退化成低秩的形式，进而弱化语言模型的表达能力。而 decoder 通常采用 casual attention（因果注意力），其 attention 矩阵是一个下三角矩阵，一定是满秩的，建模能力更强。
+Encoder 中的低秩问题。Encoder 的 self-attention 不使用 casual mask，每个 token 都能看到其他所有 token，注意力矩阵容易退化成低秩的形式，进而弱化语言模型的表达能力。而 decoder 通常采用 casual attention（因果注意力），其 attention 矩阵是一个下三角矩阵，一定是满秩的，建模能力更强。
 
 
-预训练...
+预训练任务的难度。De...
             
           </div>
         
