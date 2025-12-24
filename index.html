@@ -182,7 +182,7 @@
         
             <a class="category-link" href="/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/">
                 学习笔记
-                <div class="category-count">4</div>
+                <div class="category-count">5</div>
             </a>
         
             <a class="category-link" href="/categories/%E8%AF%BE%E7%A8%8B%E7%AC%94%E8%AE%B0/">
@@ -215,6 +215,89 @@
     </div>
     <div id="content-body">
       
+   
+
+
+<article id="post-llm-interview-note/2-1-2" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+   
+  <div class="article-inner">
+    <div class="article-main">
+      <header class="article-header">
+        
+<div class="main-title-bar">
+  <div class="main-title-dot"></div>
+  
+    
+      <h1 itemprop="name">
+        <a class="p-name article-title" href="/2025/12/24/llm-interview-note/2-1-2/">LLMs Interview Note 2.1.2 各种Normalization</a>
+      </h1>
+    
+  
+</div>
+
+        <div class='meta-info-bar'>
+          <div class="meta-info">
+  <time class="dt-published" datetime="2025-12-24T11:12:34.000Z" itemprop="datePublished">2025-12-24</time>
+</div>
+          <div class="need-seperator meta-info">
+            <div class="meta-cate-flex">
+  
+  <a class="meta-cate-link" href="/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/">学习笔记</a>
+   
+</div>
+  
+          </div>
+          <div class="wordcount need-seperator meta-info">
+            2.1k 词 
+          </div>
+        </div>
+        
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/LLM/" rel="tag">LLM</a></li></ul>
+
+      </header>
+      <div class="e-content article-entry" itemprop="articleBody">
+        
+          <div class="truncate-text">
+            
+              （下面假设输入数据 xxx 是 N×C×H×WN\times C\times H\times WN×C×H×W 的形状）
+BatchNorm
+
+做BN的动机：不同batch的数据分布可能不同，初始时微小的差异可能随着深层网络而逐渐加大，造成参数尺度和方差漂移（internal covariate shift），容易造成梯度爆炸/梯度消失，从而无法训练，这限制人们只能使用较小的学习率来训练模型；为了缓解这一问题需要有一种normalization方法来平衡batch之间的数据分布，以此提升模型训练的稳定性。
+
+x′=x−μσ⋅γ+βx&#x27; = \dfrac{x-\mu}{\sigma}\cdot \gamma+\beta
+x′=σx−μ​⋅γ+β
+μ=1NHW⋅∑i→N∑j→H∑k→Wxipjk\mu = \dfrac{1}{NHW}\cdot\sum_{i\to N}\sum_{j\to H}\sum_{k\to W} x_{ipjk}
+μ=NHW1​⋅i→N∑​j→H∑​k→W∑​xipjk​
+
+
+这里 μ\muμ 和 σ\sigmaσ 是BN层根据训练数据估计出来的；...
+            
+          </div>
+        
+      </div>
+
+         
+    </div>
+    
+     
+    <a class="right-panel  non-pic  "
+      
+      href="/2025/12/24/llm-interview-note/2-1-2/" 
+    >
+       
+      <i class="fa-solid fa-angle-right non-pic"></i>
+       
+    </a>
+     
+  </div>
+  
+</article>
+
+
+
+
+
+
    
 
 
@@ -1200,137 +1283,6 @@ np.where(condition, x, y)：当condition在对应位置为真时返...
     <a class="right-panel  non-pic  "
       
       href="/2024/06/18/math/machine-learning/" 
-    >
-       
-      <i class="fa-solid fa-angle-right non-pic"></i>
-       
-    </a>
-     
-  </div>
-  
-</article>
-
-
-
-
-
-
-   
-
-
-<article id="post-math/real-analysis" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
-   
-  <div class="article-inner">
-    <div class="article-main">
-      <header class="article-header">
-        
-<div class="main-title-bar">
-  <div class="main-title-dot"></div>
-  
-    
-      <h1 itemprop="name">
-        <a class="p-name article-title" href="/2024/06/13/math/real-analysis/">实变函数课程笔记</a>
-      </h1>
-    
-  
-</div>
-
-        <div class='meta-info-bar'>
-          <div class="meta-info">
-  <time class="dt-published" datetime="2024-06-13T14:33:00.000Z" itemprop="datePublished">2024-06-13</time>
-</div>
-          <div class="need-seperator meta-info">
-            <div class="meta-cate-flex">
-  
-  <a class="meta-cate-link" href="/categories/%E8%AF%BE%E7%A8%8B%E7%AC%94%E8%AE%B0/">课程笔记</a>
-   
-</div>
-  
-          </div>
-          <div class="wordcount need-seperator meta-info">
-            6.9k 词 
-          </div>
-        </div>
-        
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E6%95%B0%E5%AD%A6/" rel="tag">数学</a></li></ul>
-
-      </header>
-      <div class="e-content article-entry" itemprop="articleBody">
-        
-          <div class="truncate-text">
-            
-              第一章
-
-
-任何无限集必有一个可列子集
-
-对无限集而言，一定存在某个它的真子集，使得该子集与原集合对等
-
-
-
-[0,1] 是不可列的（用闭区间套定理证明）
-
-
-任意个开集的并是开集
-
-任意个闭集的交是闭集
-
-
-
-有限个开集的交是开集
-
-有限个闭集的并是闭集
-
-
-
-聚点：E 为点集，a 的任一邻域中都含有 E 中异于 a 的点（据此可以构造一个含于 E 的点列趋近于 a）
-
-
-聚点 a 的任意邻域中都有无穷多个异于 a 的点
-
-
-若集合中的任意一点都为聚点，则该集合为闭集
-
-
-
-
-开集定义略，闭集为开集关于R的补集
-
-
-导集：E 中一切聚点构成的集合 E’
-
-任何集合的导集一定为闭集（通过取补集证明）
-
-
-
-孤立点：集合中不是聚点的点 E \ E’
-
-
-闭包：集合与其导集的并 E‾=E∪E′\overline{E}=E \cup E{&#x27;}E=E∪E′
-
-闭集的闭包与其本身相等（由闭集的导集含于原集合这一点可直接推出）
-
-
-
-完全集：E = E’
-
-若闭集中没有孤立点，则其为完全集
-
-
-
-f(x)f(x)f(x) 连续   ⟺  \iff⟺f(x)f(x)f(x) 关于任意...
-            
-          </div>
-        
-      </div>
-
-         
-    </div>
-    
-     
-    <a class="right-panel  non-pic  "
-      
-      href="/2024/06/13/math/real-analysis/" 
     >
        
       <i class="fa-solid fa-angle-right non-pic"></i>
