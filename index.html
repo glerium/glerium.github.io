@@ -259,7 +259,8 @@
         
           <div class="truncate-text">
             
-              （下面假设输入数据 xxx 是 N×C×H×WN\times C\times H\times WN×C×H×W 的形状）
+              本文为 LLMs Interview Note 的学习笔记。
+（下面假设输入数据 xxx 是 N×C×H×WN\times C\times H\times WN×C×H×W 的形状）
 BatchNorm
 
 做BN的动机：不同batch的数据分布可能不同，初始时微小的差异可能随着深层网络而逐渐加大，造成参数尺度和方差漂移（internal covariate shift），容易造成梯度爆炸/梯度消失，从而无法训练，这限制人们只能使用较小的学习率来训练模型；为了缓解这一问题需要有一种normalization方法来平衡batch之间的数据分布，以此提升模型训练的稳定性。
@@ -270,7 +271,7 @@ x′=σx−μ​⋅γ+β
 μ=NHW1​⋅i→N∑​j→H∑​k→W∑​xipjk​
 
 
-这里 μ\muμ 和 σ\sigmaσ 是BN层根据训练数据估计出来的；...
+这里 μ\...
             
           </div>
         
