@@ -73,6 +73,6 @@ comment:
     # 详见 https://github.com/imaegoo/twikoo
 
 #Analytics
-gauges_analytics: 6946e8d63391706f9651c69b
+gauges_analytics:
 google_analytics: G-P8MWPQK9PH #UA-xxxxxx
 baidu_analytics: false # ddxxxxxxxxxxxxxxxxx In the https://hm.baidu.com/hm.js? Afterwards
