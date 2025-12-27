@@ -106,7 +106,7 @@ categories:
 
         - $X \le_P Y$：X不难于Y、X可以在多项式复杂度内归约成Y
 
-            ![image.png](image.png)
+            ![image.webp](image.webp)
 
 1. 数值计算
 

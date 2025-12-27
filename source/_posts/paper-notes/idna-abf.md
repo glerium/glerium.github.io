@@ -10,7 +10,7 @@ categories:
 
 给定一组固定长度的DNA序列，进行有无甲基化的预测，输出一个binary概率
 
-![image.png](image.png)
+![image.webp](image.webp)
 
 网络架构：
 
@@ -26,23 +26,23 @@ categories:
 
 - **采用Uniform Manifold Approximation and Projection (UMAP)对不同模型对DNA序列的聚类结果进行可视化，和其他模型进行对比**
 
-![image.png](image%201.png)
+![image.webp](image%201.webp)
 
 - **跨物种对比Accuracy，反映进化路径相似的物种之间甲基化结构的相似性**
 
-![image.png](image%202.png)
+![image.webp](image%202.webp)
 
 - **cross-species validation，用一个物种训练，另一个物种预测，反映出的结论和上条类似**
 
-![image.png](image%203.png)
+![image.webp](image%203.webp)
 
 - **用attention map反映出不同k-mers在特征提取中的差异性，以此证明采用3mers+6mers构建模型能提取到更多信息。**
 
     - 3mers特征“learns more local discriminative information as compared to that before training”，而6mers特征“more focused on global information after training”
 
-![image.png](image%204.png)
+![image.webp](image%204.webp)
 
 - 验证不同尺度的数据集对结果的影响
 
-![image.png](image%205.png)
+![image.webp](image%205.webp)
 

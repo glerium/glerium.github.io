@@ -7,13 +7,13 @@ tags:
 categories:
     - 课程笔记
 ---
-![image.png](image.png)
+![image.webp](image.webp)
 
-![image.png](image%201.png)
+![image.webp](image%201.webp)
 
-![image.png](image%202.png)
+![image.webp](image%202.webp)
 
-![image.png](image%203.png)
+![image.webp](image%203.webp)
 
 正态分布方差的性质：
 
@@ -57,18 +57,18 @@ c\Gamma(\alpha,\lambda) &= \Gamma(\alpha, \frac{\lambda}{c}) \\
 |卡方分布 χ^2(n)|n|2n|
 |Gamma分布|α/λ|α/(λ^2)|
 
-![image.png](image%204.png)
+![image.webp](image%204.webp)
 
 修偏后的样本方差是对原始方差的无偏估计
 
 ---
 
-![image.png](image%205.png)
+![image.webp](image%205.webp)
 
 ---
 
-![image.png](image%206.png)
+![image.webp](image%206.webp)
 
 ---
 
-![image.png](image%207.png)
+![image.webp](image%207.webp)
