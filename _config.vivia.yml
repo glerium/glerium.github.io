@@ -56,7 +56,7 @@ categories:
 # 第三方评论系统
 comment:
   valine:
-    enable: true           # 是否启用 Valine 评论系统
+    enable: false           # 是否启用 Valine 评论系统
     placeholder: Just go go
     pageSize: 10
     highlight: true
@@ -64,8 +64,7 @@ comment:
     # 可在此添加其他 Valine 支持的配置项
     # 详见 https://valine.js.org/configuration.html
   twikoo:
-    enable: false           # 是否启用 Twikoo 评论系统
-    envID:
+    enable: true            # 是否启用 Twikoo 评论系统
     region:
     path: location.pathname
     lang:
