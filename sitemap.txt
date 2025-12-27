@@ -1,8 +1,8 @@
+https://glerium.github.io/2025/12/20/llm-interview-note/1-1-1/
 https://glerium.github.io/2025/12/24/llm-interview-note/2-1-2/
 https://glerium.github.io/2025/12/23/llm-interview-note/1-3-4/
 https://glerium.github.io/2025/12/23/llm-interview-note/1-3-1/
 https://glerium.github.io/2025/12/21/llm-interview-note/1-2-1/
-https://glerium.github.io/2025/12/20/llm-interview-note/1-1-1/
 https://glerium.github.io/2025/12/14/paper-notes/multimodal-token-compression/
 https://glerium.github.io/2024/06/13/math/real-analysis/
 https://glerium.github.io/2024/12/20/math/operational-research/
