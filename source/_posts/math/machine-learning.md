@@ -12,44 +12,44 @@ categories:
 
     - 2-4
 
-        ![image.png](image.png)
+        ![image.webp](image.webp)
 
     - 3-7
 
-        ![image.png](image%201.png)
+        ![image.webp](image%201.webp)
 
     - 4-7
 
-        ![image.png](image%202.png)
+        ![image.webp](image%202.webp)
 
     - 4-13
 
-        ![image.png](image%203.png)
+        ![image.webp](image%203.webp)
 
-        ![image.png](image%204.png)
+        ![image.webp](image%204.webp)
 
     - 5-2
 
-        ![image.png](image%205.png)
+        ![image.webp](image%205.webp)
 
     - 6-6
 
-        ![image.png](image%206.png)
+        ![image.webp](image%206.webp)
 
     - 11-8
 
-    ![image.png](image%207.png)
+    ![image.webp](image%207.webp)
 
-    ![image.png](image%208.png)
+    ![image.webp](image%208.webp)
 
-    ![image.png](image%209.png)
+    ![image.webp](image%209.webp)
 
-    ![image.png](image%2010.png)
+    ![image.webp](image%2010.webp)
 
-    ![](image%2011.png)
+    ![image.webp](image%2011.webp)
 
 
-    ![image.png](image%2012.png)
+    ![image.webp](image%2012.webp)
 
     - 12-5
 
@@ -57,25 +57,25 @@ categories:
 
     - 13-4
 
-        ![image.png](image%2013.png)
+        ![image.webp](image%2013.webp)
 
-        ![image.png](image%2014.png)
+        ![image.webp](image%2014.webp)
 
     - 13-15
 
-        ![image.png](image%2015.png)
+        ![image.webp](image%2015.webp)
 
-        ![image.png](image%2016.png)
+        ![image.webp](image%2016.webp)
 
     - 16-30（第一张是random policy，第二张是optimal policy）
 
-        ![image.png](image%2017.png)
+        ![image.webp](image%2017.webp)
 
-        ![image.png](image%2018.png)
+        ![image.webp](image%2018.webp)
 
     - 21-7
 
-        ![image.png](image%2019.png)
+        ![image.webp](image%2019.webp)
 
 - numpy函数整理
 
@@ -129,7 +129,7 @@ categories:
 
         - 通常用分子布局
 
-        ![image.png](image%2020.png)
+        ![image.webp](image%2020.webp)
 
 - 3_numerical_computation
 
@@ -141,7 +141,7 @@ categories:
 
         - softmax 防止上下溢的方法：
 
-        ![image.png](image%2021.png)
+        ![image.webp](image%2021.webp)
 
     - 梯度下降的理论基础：对标量函数而言，$f(x-\varepsilon\cdot\mathrm{sign}(f^{'}(x)))<f(x)$
 
@@ -149,13 +149,13 @@ categories:
 
             - 如何判断？对Hessian矩阵进行特征值分解
 
-            ![image.png](image%2022.png)
+            ![image.webp](image%2022.webp)
 
 - 4_machine_learning_basis
 
     - 常见的有监督/无监督学习方法：
 
-        ![image.png](image%2023.png)
+        ![image.webp](image%2023.webp)
 
     - confusion matrix（混淆矩阵）：每个元素表示（target=i, output=j）的数据个数
 
@@ -173,7 +173,7 @@ categories:
 
             - ROC曲线中的特殊点【曲线越接近(0,1)效果越好（结合AUC指标的意义来记）】
 
-            ![image.png](image%2024.png)
+            ![image.webp](image%2024.webp)
 
             - AUC：ROC曲线下的面积，越接近1越好
 
@@ -193,13 +193,13 @@ categories:
 
     - 矩阵求导tricks：
 
-    ![image.png](image%2025.png)
+    ![image.webp](image%2025.webp)
 
     - 感知机
 
         - loss优化算法
 
-            ![image.png](image%2026.png)
+            ![image.webp](image%2026.webp)
 
         - 总体时间复杂度为 O(Tmn) （T为循环轮数）
 
@@ -221,7 +221,7 @@ categories:
 
         - 动量法（Momentum）：在更新权重时添加上次迭代中权重的变化量，类似于惯性
 
-            ![image.png](image%2027.png)
+            ![image.webp](image%2027.webp)
 
     - Universal Approximation Th.：任何能被MLP解决的问题都能被单隐藏层的MLP解决（实践中最多使用两层MLP）
 
@@ -243,7 +243,7 @@ categories:
 
         - 推导过程：
 
-            ![image.png](image%2028.png)
+            ![image.webp](image%2028.webp)
 
         - 于是方差最大问题被转化为二次型的最大化问题，对$\Sigma$进行特征值分解即可，前k大的特征值即为最大方差之和，其对应的特征向量即为k个主成分；$\Sigma$为正交矩阵，因此可以保证k个主成分之间正交
 
@@ -271,7 +271,7 @@ categories:
 
             - 构造方法：选取方差最大的维度，以其中位数为界限把剩余数据划分为两份
 
-                ![image.png](image%2029.png)
+                ![image.webp](image%2029.webp)
 
             - KD树的期望时间复杂度为 $O(\log n)$，极端情况下可退化为 $O(n)$
 
@@ -309,7 +309,7 @@ categories:
 
 - 10_EM
 
-    ![image.png](image%2030.png)
+    ![image.webp](image%2030.webp)
 
     - 步骤：
 
@@ -333,11 +333,11 @@ categories:
 
         - 定义信息增益如下：
 
-        ![image.png](image%2031.png)
+        ![image.webp](image%2031.webp)
 
         - 构建决策树的过程中，贪心地选择信息增益最大的特征（手推决策树）
 
-        ![image.png](image%2032.png)
+        ![image.webp](image%2032.webp)
 
 - 12_GiniIndex_Pruning
 
@@ -387,7 +387,7 @@ categories:
 
         - 限制条件 $1-\xi_j-t_j(\omega x_j^T+b)\le 0$，$\xi_j\ge 0$
 
-    ![image.png](image%2033.png)
+    ![image.webp](image%2033.webp)
 
     - C是误分类惩罚项的权重
 
@@ -415,7 +415,7 @@ categories:
 
             - 思想类似于微积分中用阶跃函数的组合逼近复杂函数
 
-            ![image.png](image%2034.png)
+            ![image.webp](image%2034.webp)
 
             - 不断增大效果更优的模型权重，否则降低权重
 
@@ -519,7 +519,7 @@ categories:
 
         - step满足下两式时一定可以收敛
 
-        ![image.png](image%2035.png)
+        ![image.webp](image%2035.webp)
 
     - selection methods：
 
@@ -529,7 +529,7 @@ categories:
 
         - UCB（upper-confidence-method）：结合上两者优点
 
-        ![image.png](image%2036.png)
+        ![image.webp](image%2036.webp)
 
     - Bellman方程：
 
@@ -609,11 +609,11 @@ categories:
 
 - 23_transformer
 
-    ![image.png](image%2037.png)
+    ![image.webp](image%2037.webp)
 
-    ![image.png](image%2038.png)
+    ![image.webp](image%2038.webp)
 
-    ![image.png](image%2039.png)
+    ![image.webp](image%2039.webp)
 
 
 
