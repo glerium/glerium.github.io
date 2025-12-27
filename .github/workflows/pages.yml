@@ -41,9 +41,6 @@ jobs:
           cat > _config.private.yml << 'EOF'
           theme_config:
             comment:
-              valine:
-                appId: ${{ secrets.VALINE_APP_ID }}
-                appKey: ${{ secrets.VALINE_APP_KEY }}
               twikoo:
                 envID: ${{ secrets.TWIKOO_ENV_ID }}
           EOF
