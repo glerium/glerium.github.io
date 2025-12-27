@@ -39,12 +39,13 @@ jobs:
       - name: Create private config from environment secrets
         run: |
           cat > _config.private.yml << 'EOF'
-          comment:
-            valine:
-              appId: ${{ secrets.VALINE_APP_ID }}
-              appKey: ${{ secrets.VALINE_APP_KEY }}
-            twikoo:
-              envID: ${{ secrets.TWIKOO_ENV_ID }}
+          theme_config:
+            comment:
+              valine:
+                appId: ${{ secrets.VALINE_APP_ID }}
+                appKey: ${{ secrets.VALINE_APP_KEY }}
+              twikoo:
+                envID: ${{ secrets.TWIKOO_ENV_ID }}
           EOF
 
       - name: Build
