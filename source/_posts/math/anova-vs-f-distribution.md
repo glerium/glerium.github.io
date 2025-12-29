@@ -71,9 +71,7 @@ $$factor_i=\left\{v_{i,1},~v_{i,2},~\ldots,~ v_{i,n_i} \right\}$$
 
 $$\text{sample:}~~ y_{(v_1,~v_2,~\ldots,~v_n)} = μ+ \sum f_i+ \varepsilon$$
 
-$$\sum f_i ~\text{represents all related factors' prime influence},\ \\ \text{containing interactive and non text-interactive}$$
-
-$$\varepsilon ~ \text{represent observation error}$$
+$\sum f_i$ represents all related factors' prime influence containing interactive and non text-interactive; $\varepsilon$ represent observation error.
 
 上面的式子是基于如下假设：
 

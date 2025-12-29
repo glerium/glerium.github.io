@@ -17,8 +17,9 @@ categories:
 
 正态分布方差的性质：
 
-$$E(s^2) = \sigma^2 \\ 
-E(s^{\star2}) = \frac{n-1}{n}\sigma^2$$
+$$E(s^2) = \sigma^2 $$
+
+$$E(s^{\star2}) = \frac{n-1}{n}\sigma^2$$
 
 二阶矩公式：
 
