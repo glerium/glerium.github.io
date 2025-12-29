@@ -13,6 +13,7 @@
   },
   "dependencies": {
     "@renbaoshuo/markdown-it-katex": "^2.0.2",
+    "colorjs.io": "^0.4.5",
     "hexo": "^8.0.0",
     "hexo-deployer-git": "^4.0.0",
     "hexo-generator-archive": "^2.0.0",
@@ -25,9 +26,11 @@
     "hexo-renderer-markdown-it": "^7.1.1",
     "hexo-renderer-stylus": "^3.0.1",
     "hexo-server": "^3.0.0",
+    "hexo-symbols-count-time": "^0.7.1",
     "hexo-theme-landscape": "^1.0.0",
-    "hexo-theme-vivia": "^0.5.0",
+    "js-yaml": "^4.1.0",
     "katex": "^0.16.27",
-    "markdown-it": "^14.1.0"
+    "markdown-it": "^14.1.0",
+    "stylus": "^0.64.0"
   }
 }
