@@ -14,6 +14,8 @@ categories:
 
 - 从meta-learning的角度来看，multi-task learning需要相当多的 (task, dataset) 组合作为train sample，这是不现实的
 
+<!--more-->
+
 ### 创新点
 
 - 提出了一个更大的LM架构，包含三种大小：GPT-1、BERT、GPT-2

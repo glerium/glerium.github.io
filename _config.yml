@@ -58,7 +58,7 @@ pagination_dir: page
 include: null
 exclude: null
 ignore: null
-theme: vivia
+theme: next
 archive_generator:
   per_page: 0
 markdown:

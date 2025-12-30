@@ -13,7 +13,9 @@ categories:
 
     - 在MLLM中更加明显，visual / audio数据的token数量比纯文本高几个数量级
 
-    ![image.webp](image.webp)
+<!--more-->
+
+![image.webp](image.webp)
 
 ## 为什么有效
 

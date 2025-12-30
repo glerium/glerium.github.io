@@ -7,6 +7,8 @@ tags:
 categories:
     - 课程笔记
 ---
+本文是数理统计的课程学习笔记。
+<!--more-->
 ![image.webp](image.webp)
 
 ![image.webp](image%201.webp)

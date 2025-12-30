@@ -10,6 +10,8 @@ categories:
 
 给定一组固定长度的DNA序列，进行有无甲基化的预测，输出一个binary概率
 
+<!--more-->
+
 ![image.webp](image.webp)
 
 网络架构：

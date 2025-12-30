@@ -8,11 +8,16 @@ categories:
     - 课程笔记
 ---
 
+本文是机器学习的课程学习笔记。
+
+<!--more-->
+
 - 例题集锦
 
     - 2-4
 
         ![image.webp](image.webp)
+        
 
     - 3-7
 
