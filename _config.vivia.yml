@@ -44,8 +44,8 @@ sidebar:
     sticky:                # 固定在页面顶部的组件
       - category
       - tag
+      - recent_posts
 #      - archive
-#      - recent_posts
 
 # 侧边栏组件设置
 archive_type: 'monthly'

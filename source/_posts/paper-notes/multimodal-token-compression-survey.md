@@ -1,8 +1,9 @@
 ---
-title: "[论文笔记] When Tokens Talk Too Much: A Survey of  Multimodal Long-Context Token Compression  across Images, Videos, and Audios"
+title: "[论文笔记] When Tokens Talk Too Much: A Survey of Multimodal Long-Context Token Compression  across Images, Videos, and Audios"
 date: 2025/12/14 22:08:30
 tags:
     - LLM
+    - Token压缩
 categories:
     - 论文笔记
 ---
