@@ -38,9 +38,8 @@ jobs:
         run: |
           cat > _config.private.yml << 'EOF'
           theme_config:
-            comment:
-              twikoo:
-                envID: ${{ secrets.TWIKOO_ENV_ID }}
+            twikoo:
+              envId: ${{ secrets.TWIKOO_ENV_ID }}
           EOF
 
       - name: Build

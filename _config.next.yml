@@ -907,3 +907,8 @@ vendors:
 css: css
 js: js
 images: images
+
+# Twikoo comment system
+twikoo:
+  enable: true
+  visitor: true
