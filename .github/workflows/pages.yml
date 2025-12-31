@@ -34,9 +34,9 @@ jobs:
         run: npm ci
 
       # 从 github-pages environment secrets 生成私密 config
-      - name: Create private config from environment secrets
+      - name: Create private config
         run: |
-          cat > _config.private.yml << 'EOF'
+          cat > _config.private.yml << EOF
           theme_config:
             twikoo:
               envId: ${{ secrets.TWIKOO_ENV_ID }}
