@@ -5,6 +5,7 @@ categories:
     - 算法竞赛
 tags:
     - 动态规划
+    - 矩阵快速幂
 ---
 
 别告诉我你不知道什么是[矩阵乘法](https://baike.baidu.com/item/%E7%9F%A9%E9%98%B5%E4%B9%98%E6%B3%95) (╯▽╰)  
