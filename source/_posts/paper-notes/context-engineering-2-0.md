@@ -4,7 +4,7 @@ title: "[论文笔记] Context Engineering 2.0: The Context of Context Engineeri
 date: 2025/12/30 18:49:09
 tags:
     - LLM
-    - 提示词工程
+    - 上下文工程
 categories:
     - 论文笔记
 ---
