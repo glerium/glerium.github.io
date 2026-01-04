@@ -17,16 +17,11 @@ jobs:
           # If your repository depends on submodule, please see: https://github.com/actions/checkout
           submodules: recursive
 
-      - name: Use Node.js 20
+      - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
           # Examples: 20, 18.19, >=16.20.2, lts/Iron, lts/Hydrogen, *, latest, current, node
           # Ref: https://github.com/actions/setup-node#supported-version-syntax
-          node-version: "20"
-
-      - name: Cache NPM Dependencies
-        uses: actions/setup-node@v4
-        with:
           node-version: 20
           cache: 'npm'
       
