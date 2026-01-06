@@ -8,7 +8,7 @@ tags:
     - Agent Memory
 categories:
     - 论文笔记
-    - 论文总结
+    - 文献整理
 ---
 
 ## MemAgent (2025.06)
