@@ -25,7 +25,7 @@ $$\frac1N \sum_{n=1}^n \sum_{t}^{T_n}R(\tau^{(n)})\log P_\theta(a_n^{(t)}|s_n^{(
 
 不过在这种情况下，我们依然需要人为设定采样步数这个超参数。为了避免这个问题，有学者提出了 Generalized Advantage Estimation，也就是 GAE。它通过数学推导，可以把从每步向后采样若干步的方法，转化为一次直接采样无限步，然后整体对优势函数进行估计。GAE 的最终公式为 
 
-$$A_\theta^{\text{GAE}}(s_t,a)=\sum_{b=0}^{\infty}(\tau\lambda)^b \delta_{t+b}^V$$
+$$A_\theta^{\text{GAE}}(s_t,a)=\sum_{b=0}^{\infty}(\gamma\lambda)^b \delta_{t+b}^V$$
 
 这种做法不仅让整体式子变得简洁，无需确定采样步数；还避免了从每步都向前采样的做法，减少额外计算的同时，也增强了训练的稳定性。
 
