@@ -110,3 +110,7 @@ Return（回报）：从当前时间点到游戏结束的 reward 的累计和
 - 通常追求的是 return 最大，而不是贪心让当前步 reward 最大
 
 强化学习的目标：训练一个 policy 神经网络，在所有的 trajectory 中，得到 return 的期望最大。
+
+## 参考文献
+
+![零基础学习强化学习算法：ppo](https://www.bilibili.com/video/BV1iz421h7gb)
