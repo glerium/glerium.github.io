@@ -113,4 +113,4 @@ Return（回报）：从当前时间点到游戏结束的 reward 的累计和
 
 ## 参考文献
 
-![零基础学习强化学习算法：ppo](https://www.bilibili.com/video/BV1iz421h7gb)
+[零基础学习强化学习算法：ppo](https://www.bilibili.com/video/BV1iz421h7gb)
