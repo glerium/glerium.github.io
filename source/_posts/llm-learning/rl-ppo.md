@@ -13,7 +13,7 @@ categories:
 
 ## 大纲
 
-首先介绍了强化学习的基本概念（如Agent State Action Reward等）。RL的基本目标是为了让总体 return 最大，根据对期望汇报的数学推导，导出了 policy gredient 的式子 $\frac1N \sum_{n=1}^n \sum_{t}^{T_n}R(\tau^{(n)})\log P_\theta(a_n^{(t)}|s_n^{(t)})$。
+首先介绍了强化学习的基本概念（如Agent、State、Action、Reward等）。RL的基本目标是为了让总体 return 最大，根据对期望回报的数学推导，导出了 policy gredient 的式子 $\frac1N \sum_{n=1}^n \sum_{t}^{T_n}R(\tau^{(n)})\log P_\theta(a_n^{(t)}|s_n^{(t)})$。
 
 <!--more-->
 
@@ -25,7 +25,7 @@ categories:
 
 至此，强化学习训练的准确性和稳定性已经可以得到保证，但还存在一个问题：传统 on-policy 训练的策略需要我们不断从当前的 policy network 中进行采样，而且每次采样只能用于一次训练，接着马上就被丢弃，这导致大部分时间都被浪费在采集数据上，效率很低。
 
-为了解决这一问题，PPO 作为一种 off-policy 的方法应运而生。它不需要训练的决策 policy 和从中采样的 policy 相同，而是可以通过一个 policy 来优化另一个 policy 的参数，这允许我们将一次采样的数据用于之后多次训练中，也允许我们对模型进行更大规模的分布式训练。具体做法上，PPO 通过引入重要性采样的方法，成功地把期望积分的测度转化另一个分布上的积分。最终推导出的公式为 $\mathcal{L}
+为了解决这一问题，PPO 作为一种 off-policy（纠错：应为近似 on-policy 的，只不过允许重复同一批数据多次） 的方法应运而生。它不需要训练的决策 policy 和从中采样的 policy 相同，而是可以通过一个 policy 来优化另一个 policy 的参数，这允许我们将一次采样的数据用于之后多次训练中，也允许我们对模型进行更大规模的分布式训练。具体做法上，PPO 通过引入重要性采样的方法，成功地把期望积分的测度转化另一个分布上的积分。最终推导出的公式为 $\mathcal{L}
 = -\frac{1}{N}
 \sum_{n=1}^{N}
 \sum_{t=1}^{T_n}
@@ -53,7 +53,7 @@ A^{\text{GAE}}_{\theta'}(s_n^t, a_n^t)
 1+\epsilon
 \right)
 A^{\text{GAE}}_{\theta'}(s_n^t, a_n^t)
-\Bigg)$
+\Bigg)$。在实践中，KL-PPO很少直接被使用，Clipped-PPO则成为了主流。
 
 ## 强化学习的概念
 
