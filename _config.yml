@@ -96,3 +96,8 @@ sitemap:
   rel: false
   tags: true
   categories: true
+search:
+  path: search.json
+  field: post
+  format: striptags
+  limit: 10000

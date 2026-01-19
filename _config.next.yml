@@ -844,9 +844,9 @@ algolia_search:
 # Local Search
 # Dependencies: https://github.com/next-theme/hexo-generator-searchdb
 local_search:
-  enable: false
+  enable: true
   # Show top n results per article, show all results by setting to -1
-  top_n_per_article: 1
+  top_n_per_article: 10
   # Unescape html strings to the readable one.
   unescape: false
   # Preload the search data when the page loads.
