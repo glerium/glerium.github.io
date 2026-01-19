@@ -1,6 +1,6 @@
 ---
 title: "[论文笔记] UFO^2 The Desktop AgentOS"
-date: 2026/01/20 00:33:14
+date: 2026/01/19 18:07:14
 tags:
     - Agent
     - 多模态
