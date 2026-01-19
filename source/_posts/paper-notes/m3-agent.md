@@ -1,6 +1,6 @@
 ---
 title: "[论文笔记] Seeing, Listening, Remembering, and Reasoning: A Multimodal Agent with Long-Term Memory"
-date: 2026/01/12 16:01
+date: 2026/01/11 16:01
 tags:
     - Agent
     - Agent Memory
