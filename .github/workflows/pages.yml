@@ -11,9 +11,21 @@ jobs:
     environment:
       name: github-pages
     steps:
-      - uses: actions/checkout@v6
+      - name: Checkout Repository
+        uses: actions/checkout@v6
         with:
           submodules: recursive
+          fetch-depth: 0
+      
+      - name: Sync Modification Time from Git
+        run: |
+          git config --global core.quotepath false
+          git ls-files -z -- source | while IFS= read -r -d '' path; do
+            ts="$(git log -1 --format='%ct' -- "$path" || true)"
+            if [ -n "$ts" ]; then
+              touch -d "@$ts" "$path"
+            fi
+          done
 
       - name: Setup Node.js
         uses: actions/setup-node@v6
