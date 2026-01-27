@@ -12,15 +12,13 @@ categories:
 
 - GPT-2 中的位置编码没有沿用 transformer 论文中的正余弦编码，而是将其视作一种可学习参数进行训练
 
-<!--more-->
-
 - GELU 激活函数：$\text{GELU}(x) = x*\Phi(x)$
 
   - 其中 $\Phi(x)$ 是高斯分布的累积分布函数
 
   - GELU 还有一种基于 tanh 的近似形式。GPT-2 采用的就是这种形式，因为当时 tensorflow 在计算 $\Phi(x)$ 时非常慢；不过现在已经没有了采用 tanh 的必要
 
-  - ReLU 在值小于零时，不会产生任何梯度，从而导致神经元死亡。GeLU 可以避免这一问题，实践中效果也更好。
+  - ReLU 在值小于零时，不会产生任何梯度，从而导致神经元死亡。GELU 可以避免这一问题，实践中效果也更好。
 
 - 在原始 transformer 论文和 GPT-2 中，输入层的 token embedding 矩阵和输出层的 lm_head 互相共享权重参数。
 
@@ -36,7 +34,7 @@ categories:
 
 - Xavier 初始化会将标准差设为 $1/\sqrt{K}$（K是进入该层的特征数量）
 
-- bf16相比float16而言，牺牲了尾数精度来换取和float32相同的表示范围（指数位长度）
+- bf16 相比 float16 而言，牺牲了尾数精度来换取和 float32 相同的表示范围（指数位长度）
 
 ![image.png](https://cdn2.flowus.cn/oss/86a66054-a93f-47c3-9881-4c67f820d82e/image.png?time=1769516100&token=fdc1980895471d060490ef5fc2e85131f93bdfeeaaee8570a6ea507ebe2b113b&role=free)
 
@@ -44,11 +42,11 @@ categories:
 
 - 模型训练加速策略：
 
-  - torch.set_float32_matmul_precision('high')：采用tf32在tensor core中进行计算
+  - `torch.set_float32_matmul_precision('high')`：采用tf32在tensor core中进行计算
 
-  - torch.autocast：混合精度训练，将一部分计算转移到bfloat16上
+  - `torch.autocast`：混合精度训练，将一部分计算转移到bfloat16上
 
-  - torch.compile：预先对模型的代码进行编译处理，摆脱Python解释器只能顺序执行的局限性
+  - `torch.compile`：预先对模型的代码进行编译处理，摆脱Python解释器只能顺序执行的局限性
 
   - FlashAttention：采用算子融合的方式，重写attention机制，减少数据传输
 
@@ -66,7 +64,7 @@ categories:
 
 - 显存不足时，可以采用梯度累积（gradient accumulation），通过串行计算来模拟大显存
 
-  - loss.backward() 总是会累计梯度，而不是覆盖梯度
+  - `loss.backward()` 总是会累计梯度，而不是覆盖梯度
 
   - 记得对累加的梯度按照累加步数取平均值，以遵循loss的计算公式
 
