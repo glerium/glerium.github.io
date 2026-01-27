@@ -12,6 +12,8 @@ categories:
 
 - GPT-2 中的位置编码没有沿用 transformer 论文中的正余弦编码，而是将其视作一种可学习参数进行训练
 
+<!--more-->
+
 - GELU 激活函数：$\text{GELU}(x) = x*\Phi(x)$
 
   - 其中 $\Phi(x)$ 是高斯分布的累积分布函数
