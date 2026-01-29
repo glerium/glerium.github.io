@@ -70,7 +70,7 @@ markdown:
     breaks: true
     linkify: true
     typographer: true
-    quotes: '“”‘’'
+    quotes: '""'''''
   enable_rules:
   disable_rules:
   plugins:
