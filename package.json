@@ -31,7 +31,7 @@
     "hexo-symbols-count-time": "^0.7.1",
     "hexo-theme-landscape": "^1.0.0",
     "katex": "^0.16.27",
-    "markdown-it": "^14.1.0",
+    "markdown-it": "^14.1.1",
     "stylus": "^0.64.0"
   },
   "overrides": {
