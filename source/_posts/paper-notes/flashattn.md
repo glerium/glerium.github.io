@@ -9,8 +9,6 @@ categories:
   - 论文笔记
 ---
 
-# [论文笔记] FlashAttention: Fast and Memory-Efficient Exact Attention with IO-Awareness (2022.06)
-
 ## 摘要
 
 Transformer -> 时空复杂度为n^2，长序列的时间和内存占用过大
