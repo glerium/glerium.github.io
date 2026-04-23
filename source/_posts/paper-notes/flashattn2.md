@@ -9,8 +9,6 @@ categories:
   - 论文笔记
 ---
 
-# [论文笔记] FlashAttention-2: Faster Attention with Better Parallelism and Work Partitioning (2023.07)
-
 FlashAttention-2 是基于 FlashAttention 的改进版，运算效率得到了约 2x 提升。下面是本文的阅读笔记。
 
 ## 动机
