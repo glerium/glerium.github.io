@@ -9,8 +9,6 @@ categories:
   - 论文笔记
 ---
 
-# [论文笔记] FlashAttention-3: Fast and Accurate Attention with Asynchrony and Low-precision (2024.07)
-
 在 FA2 中，注意力的计算速度得以大幅提升。但其在新一代GPU上的利用率依然偏低，比如在 Hopper 架构的 H100 上利用率仅有35%，而GEMM内核则可达80-90%。这种现象主要源自以下几个原因：
 
 1. 实现差异：没有采用Hopper架构的专有指令集进行加速
