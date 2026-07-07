@@ -6,7 +6,7 @@ categories:
 tags:
     - AI Infra
     - Ascend C
-	- 算子开发
+    - 算子开发
 ---
 
 开发模型：Host-Device

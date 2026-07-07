@@ -6,7 +6,7 @@ categories:
 tags:
     - AI Infra
     - Ascend C
-	- 算子开发
+    - 算子开发
 ---
 
 ## 指令流水分类
