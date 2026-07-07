@@ -27,7 +27,7 @@ QRHead是对retrieval head的改进。
 
 2. 采用真实世界的数据进行运行，同时发现方法仅需较少的数据即可运行
 
-![image.png](Query-Focused+Retrieval+Heads+Improve+Long-Context+Reasoning+and+Re-ranking++2025.09++19bc0d62-e480-41ba-a566-6773d0c173fa/image.png)
+![image.png](image.webp)
 
 ## 对QRHead的定义
 
