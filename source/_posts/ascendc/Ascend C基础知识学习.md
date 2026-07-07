@@ -1,3 +1,14 @@
+---
+title: "Ascend C基础知识学习"
+date: 2026-07-07 15:12:00
+categories:
+    - 学习笔记
+tags:
+    - AI Infra
+    - Ascend C
+	- 算子开发
+---
+
 开发模型：Host-Device
 
 编程模型：
@@ -7,6 +18,8 @@
 存储单元：
 * AI Core内部存储：LocalTensor
 * 外部存储：GlobalTensor
+
+<!--more-->
 
 DMA可以实现GM与LM之间，以及不同层级LM之间的搬运
 

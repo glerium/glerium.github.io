@@ -1,3 +1,14 @@
+---
+title: "Ascend C核内同步控制"
+date: 2026-07-07 15:27:00
+categories:
+    - 学习笔记
+tags:
+    - AI Infra
+    - Ascend C
+	- 算子开发
+---
+
 ## 指令流水分类
 
 Ascend的指令流水类型分为以下几种：
@@ -8,6 +19,8 @@ Ascend的指令流水类型分为以下几种：
 * PIPE_MTE2：GM到LM的搬运（GM->L1等）
 * PIPE_MTE3：LM到GM的搬运
 * PIPE_FIX：FixPipe，从L0C向外的搬运
+
+<!--more-->
 
 ## 同步控制分类
 

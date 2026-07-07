@@ -1,3 +1,14 @@
+---
+title: "Ascend C核间同步控制"
+date: 2026-07-07 15:55:00
+categories:
+    - 学习笔记
+tags:
+    - AI Infra
+    - Ascend C
+	- 算子开发
+---
+
 ## CrossCoreSetFlag & CrossCoreWaitFlag
 
 用于支撑核间的同步控制。
@@ -8,6 +19,8 @@ __aicore__ inline void CrossCoreSetFlag(uint16_t flagId)
 ```
 
 与SetFlag & WaitFlag 类似，pipe用于指定数据流之间的依赖，flagId表示事件类型；此外还新增了modeId用于指定模式。
+
+<!--more-->
 
 ### 模式分类
 
