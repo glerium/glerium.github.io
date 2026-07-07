@@ -37,7 +37,7 @@ categories:
 
 考虑最后一个 token $t_n$ 的注意力权重，选出权重最大的 top-k% 的token $\mathcal{I}_n^{l,h}$；然后计算 $t_n$ 与这些token之间隐藏状态向量的余弦相似度平均值，即
 
-$\mathcal{E}_n^{l,h} = \frac{e \cdot x_n^L}{\|e\| \|x_n^L\|}, \qquad e = \frac{1}{|\mathcal{I}_n^{l,h}|} \sum_{j \in \mathcal{I}_n^{l,h}} x_j^L.$
+$$\mathcal{E}_n^{l,h} = \frac{e \cdot x_n^L}{\|e\| \|x_n^L\|}, \qquad e = \frac{1}{|\mathcal{I}_n^{l,h}|} \sum_{j \in \mathcal{I}_n^{l,h}} x_j^L.$$
 
 该公式即为ECS (External Context Score)，需要注意的是，每个retrieval head都存在对应的ECS
 
@@ -47,8 +47,7 @@ $\mathcal{E}_n^{l,h} = \frac{e \cdot x_n^L}{\|e\| \|x_n^L\|}, \qquad e = \frac{1
 
 参数知识存储于FFN中。为了衡量这部分值，可以把残差流在FFN前后的状态通过LogitLens映射到词汇分布上，然后计算他们的Jensen-Shannon Divergence（JSD），即
 
-$\mathcal{P}_n^l = \operatorname{JSD} \left( q(x_n^{\text{mid},l}) \parallel q(x_n^l) \right),
-$
+$$\mathcal{P}_n^l = \operatorname{JSD} \left( q(x_n^{\text{mid},l}) \parallel q(x_n^l) \right),$$
 
 这就是token-level的Parametric Knowledge Score，可以作为模型利用内部知识的衡量。
 
@@ -96,8 +95,7 @@ response-level的PKS定义为每个token的PKS均值。
 
 因此作者定义了一个幻觉分数：
 
-$\mathcal{H}_t(\mathbf{r}) = \frac{1}{|\mathbf{r}|} \sum_{t \in \mathbf{r}} \mathcal{H}_t(t), \qquad \mathcal{H}_t(t) = \sum_{l \in \mathcal{F}} \alpha \cdot \mathcal{P}_t^l - \sum_{l,h \in \mathcal{A}} \beta \cdot \mathcal{E}_t^{l,h},
-$
+$$\mathcal{H}_t(\mathbf{r}) = \frac{1}{|\mathbf{r}|} \sum_{t \in \mathbf{r}} \mathcal{H}_t(t), \qquad \mathcal{H}_t(t) = \sum_{l \in \mathcal{F}} \alpha \cdot \mathcal{P}_t^l - \sum_{l,h \in \mathcal{A}} \beta \cdot \mathcal{E}_t^{l,h},$$
 
 
 
@@ -119,16 +117,15 @@ chunk-level的PCS则可以通过对所有token的PCS取平均得到。
 
 幻觉分数的定义与token-level一致：
 
-$\mathcal{H}_c(\mathbf{r}) = \sum_{l \in \mathcal{F}} \alpha \cdot \tilde{\mathcal{P}}_\mathbf{r}^l - \sum_{l,h \in \mathcal{A}} \beta \cdot \tilde{\mathcal{E}}_\mathbf{r}^{l,h}.
-$
+$$\mathcal{H}_c(\mathbf{r}) = \sum_{l \in \mathcal{F}} \alpha \cdot \tilde{\mathcal{P}}_\mathbf{r}^l - \sum_{l,h \in \mathcal{A}} \beta \cdot \tilde{\mathcal{E}}_\mathbf{r}^{l,h}.$$
 
 ### AARF方法
 
 首先计算token-level的幻觉分数，如果其大于 $\tau$，则增强Attn模块的贡献，同时减弱FFN的贡献：
 
-$f(\mathbf{x}) = \sum_{l=1}^L \sum_{h=1}^H \widehat{\mathrm{Attn}}^{l,h} \left( \mathbf{X}_{\leq n}^{l-1} \right) \mathbf{W}_U + \sum_{l=1}^L \widehat{\mathrm{FFN}}^l \left( \mathbf{x}_n^{\mathrm{mid},l} \right) \mathbf{W}_U + \mathbf{x}_n \mathbf{W}_U$
+$$f(\mathbf{x}) = \sum_{l=1}^L \sum_{h=1}^H \widehat{\mathrm{Attn}}^{l,h} \left( \mathbf{X}_{\leq n}^{l-1} \right) \mathbf{W}_U + \sum_{l=1}^L \widehat{\mathrm{FFN}}^l \left( \mathbf{x}_n^{\mathrm{mid},l} \right) \mathbf{W}_U + \mathbf{x}_n \mathbf{W}_U$$
 
-$\begin{align*}
+$$\begin{align*}
 \widehat{\mathrm{Attn}}^{l,h}(\cdot) &= \begin{cases} 
 \alpha_2 \cdot \mathrm{Attn}^{l,h} \left( \mathbf{X}_{\leq n}^{l-1} \right), & \text{if } (l,h) \in \mathcal{A}, \\ 
 \mathrm{Attn}^{l,h} \left( \mathbf{X}_{\leq n}^{l-1} \right), & \text{otherwise} 
@@ -137,7 +134,7 @@ $\begin{align*}
 \beta_2 \cdot \mathrm{FFN}^l \left( \mathbf{x}_n^{\mathrm{mid},l} \right), & \text{if } l \in \mathcal{F}, \\ 
 \mathrm{FFN}^l \left( \mathbf{x}_n^{\mathrm{mid},l} \right), & \text{otherwise.} 
 \end{cases}
-\end{align*}$
+\end{align*}$$
 
 这里 $\alpha_2$ 大于1，且 $\beta_2$ 小于1，为两个超参数
 

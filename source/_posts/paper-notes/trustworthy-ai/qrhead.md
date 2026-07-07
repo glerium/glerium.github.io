@@ -33,19 +33,19 @@ QRHead是对retrieval head的改进。
 
 首先定义head $h$对doc $i$的QRScore：
 
-$\text{QRScore}_h(q,d_i)=\frac{1}{|q|}\sum_{t_q\in q}\sum_{t_d\in d_i}A_h^{t_q \to t_d}$
+$$\text{QRScore}_h(q,d_i)=\frac{1}{|q|}\sum_{t_q\in q}\sum_{t_d\in d_i}A_h^{t_q \to t_d}$$
 
 这表示head为doc i分配的注意力比例。
 
 然后定义head h本身的QRScore，即：
 
-$\text{QRScore}_h(q)=\sum_{d_i\in D^*}\text{QRScore}_{h}(q,d_i)$
+$$\text{QRScore}_h(q)=\sum_{d_i\in D^*}\text{QRScore}_{h}(q,d_i)$$
 
 这里的 $D^*$ 表示所有 groundtruth 证据集。head的QRScore表示它对所有正确证据分配的注意力权重。
 
 为了检测QRHead，我们需要一个真实数据集 
 
-$\mathcal{T}=\{(q,D,D^*_{q})\}$
+$$\mathcal{T}=\{(q,D,D^*_{q})\}$$
 
 在这个数据集上计算每个head对应的QRScore，然后取top-k分数的head即为正确答案。
 
@@ -55,7 +55,7 @@ $\mathcal{T}=\{(q,D,D^*_{q})\}$
 
 具体来说，对于一个query q和文章集合D，我们可以计算每篇文章和q的QRscore平均值：
 
-$\mathcal{R}(q,d_i)=\frac{1}{|\mathcal H_{\text{select}}|}\sum_{h\in \mathcal H_{\text{select}}} \text{QRScore}(q,d_i)$
+$$\mathcal{R}(q,d_i)=\frac{1}{|\mathcal H_{\text{select}}|}\sum_{h\in \mathcal H_{\text{select}}} \text{QRScore}(q,d_i)$$
 
 这表示了所有QRHead在query q的条件下，对这篇文章的注意力平均值，然后按照R降序排列文档即可。
 
