@@ -1,8 +1,22 @@
+---
+title: "Ascend C DumpTensor精度调试工作流"
+date: 2026-07-16 20:25:00
+categories:
+    - 学习笔记
+tags:
+    - AI Infra
+    - Ascend C
+    - 算子开发
+    - 使用文档
+---
+
 ## 1. 工具简介
 
 `compare_dumps.py` 用于读取程序运行过程中由 `AscendC::DumpTensor` 生成的日志，并对日志中的 DumpTensor 数据进行解析和对比。
 
 使用时，用户需要在自己的算子代码中选择需要观测的位置，并自行添加 `AscendC::DumpTensor` 指令。
+
+<!--more-->
 
 ## 2. 在算子代码中添加 DumpTensor
 
