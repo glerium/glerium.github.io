@@ -49,7 +49,7 @@ python3 -m pip install numpy
 
 ### 3.1 函数原型
 
-`DumpTensor` 可以导出 `LocalTensor` 或 `GlobalTensor`：
+`DumpTensor` 可以导出 `LocalTensor` 或 `GlobalTensor`，将其打印到标准输出流中：
 
 ```cpp
 // LocalTensor，例如 UB、L1 或 L0C 中的数据
@@ -123,6 +123,7 @@ unset ASCENDC_DUMP
 日志记录通常包含头部和数值数组，例如：
 
 ```text
+CANN Version: XX.XX, TimeStamp: XXXXXX
 DumpTensor: desc=10, addr=0, data_type=float16, position=UB, dump_size=4
 [0.125, 0.250, 0.375, 0.500]
 ```
@@ -272,24 +273,6 @@ python3 compare_dumps.py \
   --report compare_report.txt
 ```
 
-分析完成后，先恢复两个 worktree 中的临时插桩：
-
-```bash
-git -C <golden-worktree> restore <instrumented-files>
-git -C <test-worktree> restore <instrumented-files>
-```
-
-如果插桩包含新建的未跟踪文件，应先逐项确认，再手工移除。随后从主仓库清理 worktree：
-
-```bash
-cd <repo-root>
-git worktree remove <golden-worktree>
-git worktree remove <test-worktree>
-git worktree prune
-```
-
-如果 worktree 中仍有未提交修改，`git worktree remove` 会拒绝删除。应先确认并恢复调试改动；不要在未检查内容时强制删除。
-
 ## 6. 使用 compare_dumps.py
 
 ### 6.1 最简命令
@@ -343,11 +326,11 @@ MaxAbsDiff <= threshold
 
 ```text
 -----------------------------------------------------------------------------------------
-desc  name                         count    MaxAbsDiff          RMSE      Rel(%)  Status
+desc  name                        count     MaxAbsDiff           RMSE     Rel(%)   Status
 -----------------------------------------------------------------------------------------
-      input                         1024     0.0000e+00     0.0000e+00      0.0000    PASS
-      intermediate                  4096     2.4414e-04     1.2378e-05      0.0123    DIFF
-      output (size mismatch)            0            nan            nan         nan    SKIP
+      input                        1024     0.0000e+00     0.0000e+00     0.0000     PASS
+      intermediate                 4096     2.4414e-04     1.2378e-05     0.0123     DIFF
+      output (size mismatch)          0            nan            nan        nan     SKIP
 -----------------------------------------------------------------------------------------
 Overall: DIFF
 -----------------------------------------------------------------------------------------
@@ -370,12 +353,15 @@ Overall: DIFF
 
 ## 8. 使用限制与最佳实践
 
+- `DumpTensor` 指令当前仅支持打印存储位置为 UB/L1/L0C/Global Memory 的 Tensor 信息。针对 Atlas 350 加速卡，不支持打印 L1 Buffer 上的Tensor信息。
+- 单次调用 `DumpTensor` 打印的数据总量不可超过 1MB（还包括少量框架需要的头尾信息，通常可忽略）。使用时应注意，如果超出这个限制，则数据不会被打印。
 - 当前工具对每个 `desc` 只输出一项比较结果；同一 `desc` 多次出现时，不保证每条记录都会被比较。因此，一次目标运行中，一个 `desc` 应只产生一条待比较记录。
 - 如果需要观察不同位置、迭代、核或任务，应使用不同 `desc`，或者拆成多次独立运行。
 - 不要让同一 `desc` 表示多个 shape 相同但语义不同的 Tensor，否则报告可能无法反映预期数据。
 - 大 Tensor 会产生大量日志。先使用可复现的小规模输入缩小问题范围，再按需扩大。
 - 某些内部存储格式不能按逻辑 Tensor 的线性布局直接解释。应先将数据转换或搬运到适合观察的布局，再调用 `DumpTensor`。
 - `DumpTensor` 仅用于调试和验证。完成定位后应移除或禁用插桩，并重新构建正式版本。
+
 
 ## 9. 常见问题
 
@@ -395,15 +381,7 @@ grep -n "DumpTensor:" <log-file>
 - 标准输出和标准错误都被保存；
 - 运行时库和算子安装路径来自正确的 worktree 构建结果。
 
-### 9.2 找不到 desc_labels.json
-
-配置文件是可选的。若要显示可读名称，应检查当前目录、`--desc-config` 路径和 JSON 格式：
-
-```bash
-python3 -m json.tool <path-to-desc-labels.json>
-```
-
-### 9.3 出现 size mismatch 或 SKIP
+### 9.2 出现 size mismatch 或 SKIP
 
 检查两版代码和两次运行的：
 
@@ -412,29 +390,6 @@ python3 -m json.tool <path-to-desc-labels.json>
 - 输入与运行参数是否一致；
 - 日志是否截断、缺失或混入历史运行结果。
 
-### 9.4 误差很小但仍是 DIFF
-
-`MaxAbsDiff` 只要大于 `--threshold` 就会显示 `DIFF`。应依据项目精度标准调整阈值，并同时检查 RMSE 与数据范围，不要仅为了得到 `PASS` 而放宽阈值。
-
-### 9.5 两个 worktree 的结果异常相似或交叉污染
+### 9.3 两个 worktree 的结果异常相似或交叉污染
 
 确认两个版本没有共用构建目录、安装目录或生成文件，并检查各终端中的动态库和算子加载路径。必要时在干净终端中分别设置环境后重新运行。
-
-## 10. 完整检查清单
-
-运行比较前确认：
-
-- [ ] golden 与 test 来自预期的两个 revision。
-- [ ] 两个 worktree 的源码、构建、安装和运行时路径相互隔离。
-- [ ] 对应观测点使用相同语义的 `desc` 和相同 `dumpSize`。
-- [ ] 两次运行使用相同输入、shape、数据类型和运行参数。
-- [ ] 每份日志只包含本次目标运行，且未被截断。
-- [ ] 两份日志均包含预期的 `DumpTensor:` 记录。
-- [ ] `desc_labels.json` 与代码中的编号一致。
-- [ ] `--threshold` 符合项目精度标准。
-
-完成比较后确认：
-
-- [ ] 已保存需要的日志和报告。
-- [ ] 已恢复临时 DumpTensor 插桩。
-- [ ] 已清理不再需要的 worktree、构建产物和调试环境变量。
