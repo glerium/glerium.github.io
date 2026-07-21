@@ -21,6 +21,8 @@ tags:
 - 输入类型：`x` 和 `weight` 均为 `FLOAT8_E4M3FN`；
 - 重点量化模式：MXFP8，即 `scale`/`perTokenScale` 使用 `FLOAT8_E8M0`。
 
+<!--more-->
+
 V4 只影响 ACLNN 参数校验和执行器构造。进入 L0 算子后，V4/V5 共用 `GroupedMatmul` 的 infer shape、tiling 和 kernel 实现。因此本文从通用的 `TilingGMM()` 开始分析。
 
 主要代码文件：
