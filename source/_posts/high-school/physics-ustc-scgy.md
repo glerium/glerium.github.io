@@ -14,10 +14,10 @@ tags:
 $$
 \begin{aligned}
 e &= \lim_{x\to\infin}(1+\frac{1}{x})^x \\
-&= \lim_{x\to 0}(1+x)^\frac{1}{x}
-\end{aligned} \\
-\lim_{x\to 0} \frac{\sin x}{x}=1 \\
-\lim_{x\to \infin} \frac{1}{x^\alpha}=0
+&= \lim_{x\to 0}(1+x)^\frac{1}{x} \\
+\lim_{x\to 0} \frac{\sin x}{x} &= 1 \\
+\lim_{x\to \infin} \frac{1}{x^\alpha} &= 0
+\end{aligned}
 $$
 
 <!--more-->

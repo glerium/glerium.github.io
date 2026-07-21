@@ -70,7 +70,10 @@ $\ce{Ag+}$可能氧化$\ce{SO3^{2-}}$
 ---
 
 $$
-\ce{NaClO(少量) + SO2 = 2H+ + SO4^{2-} + Cl-} \\ \ce{NaClO(过量) + SO2 = 2HClO + SO4^{2-} + Cl-}
+\begin{aligned}
+\ce{NaClO}(\text{少量}) + \ce{SO2 = 2H+ + SO4^{2-} + Cl-} \\
+\ce{NaClO}(\text{过量}) + \ce{SO2 = 2HClO + SO4^{2-} + Cl-}
+\end{aligned}
 $$
 
 ---
