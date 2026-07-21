@@ -19,27 +19,20 @@ tags:
 
 ### 算法
 
-sort(): greater();
-
-upper_bound(), lower_bound(), binary_search();
+* sort(): greater();
+* upper_bound(), lower_bound(), binary_search();
 
 <!--more-->
 
 ### 数据结构
 
-vector: push_back(), pop_back(), swap(), clear(), insert() **{O(n)}**;
-
-pair: first, second, make_pair();
-
-iterator: begin(), end();
-
-map: insert(), count(), size(), erase(map::iterator), swap(), clear();
-
-multimap: 可重集的map;
-
-set, stack, queue, priority_queue
-
-deque: front(), back(), push_front(), push_back(), pop_front(), pop_back(), **at()**
+* vector: push_back(), pop_back(), swap(), clear(), insert() **{O(n)}**;
+* pair: first, second, make_pair();
+* iterator: begin(), end();
+* map: insert(), count(), size(), erase(map::iterator), swap(), clear();
+* multimap: 可重集的map;
+* set, stack, queue, priority_queue
+* deque: front(), back(), push_front(), push_back(), pop_front(), pop_back(), **at()**
 
 [UVA10125 Sumsets](https://www.luogu.com.cn/problem/UVA10125)
 
@@ -80,7 +73,7 @@ work(len,1);
 
 **差分：[P4552 [Poetize6] IncDec Sequence](https://www.luogu.com.cn/problem/P4552)**
 
-$Problem: $ 给定一个长度为 $n$ 的数列 ${a_1,a_2,\cdots,a_n}$，每次可以选择一个区间 $[l,r]$ ，使这个区间内的数都加 $1$ 或者都减 $1$。 
+$Problem:$ 给定一个长度为 $n$ 的数列 ${a_1,a_2,\cdots,a_n}$，每次可以选择一个区间 $[l,r]$ ，使这个区间内的数都加 $1$ 或者都减 $1$。 
 
 请问至少需要多少次操作才能使数列中的所有数都一样，并求出在保证最少次数的前提下，最终得到的数列有多少种。
 
@@ -102,9 +95,9 @@ $Solution:$ 定义差分数组 $c_i$，其中大于 $0$ 的元素个数为 $X$, 
 
 每步操作分三种讨论：
 
-1. 选取一个**正数 ($c_x$) 和一个负数 ($c_y$) **，使正数减1，负数加1，这样经过N次操作，我们一定可以以最少的代价将绝对值较小的一方归零，代价为 $$abs(min(X,Y))$$
-2. 选取一个**正数 ($c_x$)**，使其与 *a[1]* 配对，这样，我们经过N次操作，一定可以将它归零，代价为：$$abs(X)$$
-3. 选取一个**负数 ($c_y$)**，使其与 *a[n+1]* 配对，这样，我们经过N次操作，一定可以将它归零，代价为：$$abs(Y)$$
+1. 选取一个**正数 ($c_x$) 和一个负数 ($c_y$)**，使正数减1，负数加1，这样经过N次操作，我们一定可以以最少的代价将绝对值较小的一方归零，代价为 $abs(min(X,Y))$
+2. 选取一个**正数 ($c_x$)**，使其与 *a[1]* 配对，这样，我们经过N次操作，一定可以将它归零，代价为：$abs(X)$
+3. 选取一个**负数 ($c_y$)**，使其与 *a[n+1]* 配对，这样，我们经过N次操作，一定可以将它归零，代价为：$abs(Y)$
 
 最小步数应该优先选第1种操作，再选2、3种方案
 
@@ -185,7 +178,7 @@ $Solution:$ **已知路径求树上所有节点被路径覆盖次数**
 
 ---
 
-**Hash表：**利用Hash函数计算出哈希值，插入到对应的邻接表处。
+**Hash表:** 利用Hash函数计算出哈希值，插入到对应的邻接表处。
 
 [Acwing137. 雪花雪花雪花 ](https://www.acwing.com/problem/content/139/)
 
@@ -289,7 +282,7 @@ int main(){
 
 ---
 
-**A*算法：**类似 $bfs$，设计函数 $f(n)=g(n)+h(n)$。$g(n)$ 为已走过的步数，$h(n)$为预计还要走的步数（估价函数）。
+**A*算法:** 类似 $bfs$，设计函数 $f(n)=g(n)+h(n)$。$g(n)$ 为已走过的步数，$h(n)$为预计还要走的步数（估价函数）。
 
 将结点按照 $f(n)$ 的值加入优先队列，并不断从中从小到大取出结点进行搜索。
 
@@ -309,7 +302,7 @@ $Problem:$ 给定一张 $N(1 \le N \le 1000)$ 个点（编号 $1,2…N$），$M(
 
 ---
 
-$Solution: $ 
+$Solution:$ 
 
 - 最短路求出每个点到终点的距离
 - A* 爆搜，估价函数定为该节点到终点的最短路长度。每次从优先队列中取出 $dis(x)+h(x)$ 最小的结点。当第 $k$ 次取出终点时，该路径即为第 $k$ 短路。
