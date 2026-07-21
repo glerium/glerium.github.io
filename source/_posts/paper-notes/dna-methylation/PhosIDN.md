@@ -1,5 +1,5 @@
 ---
-title: "[论文笔记] iDNA-ABF: multi-scale deep biological language learning model for the interpretable prediction of DNA methylations"
+title: "[论文笔记] PhosIDN: an integrated deep neural network for improving protein phosphorylation site prediction by combining sequence and protein–protein interaction information"
 date: 2023/12/01 20:04
 tags:
     - DNA甲基化

@@ -1,5 +1,5 @@
 ---
-title: "[论文笔记] PhosIDN: an integrated deep neural network for improving protein phosphorylation site prediction by combining sequence and protein–protein interaction information"
+title: "[论文笔记] DeepRMethylSite: A Deep Learning based approach for Prediction of Arginine Methylation sites in Proteins"
 date: 2023/12/01 18:04
 tags:
     - DNA甲基化
