@@ -1,8 +1,21 @@
-# GroupedMatmul A5 MXFP8 调度源码导读
+---
+title: "GroupedMatmulV4 A5 MXFP8 调度源码导读"
+date: 2026-07-24 11:18
+categories:
+    - 学习笔记
+tags:
+    - AI Infra
+    - Ascend C
+    - Ascend 950
+    - 算子开发
+    - 含AI生成
+---
 
 > 本文聚焦 `aclnnGroupedMatmulV4` 在 A5/DAV_3510 上的 MXFP8 主路径：
 > `x/weight=FLOAT8_E4M3FN`、`scale/perTokenScale=FLOAT8_E8M0`、weight 为 ND，
 > `transA=false`、`transB=false`。其他 format、转置方式和量化模式只在必要时用于对比。
+
+<!--more-->
 
 ## 1. 先看全局
 
