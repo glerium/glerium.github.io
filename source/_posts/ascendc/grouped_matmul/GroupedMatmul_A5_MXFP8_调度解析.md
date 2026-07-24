@@ -9,6 +9,8 @@ tags:
     - Ascend 950
     - 算子开发
     - 含AI生成
+toc:
+  number: false
 ---
 
 > 本文聚焦 `aclnnGroupedMatmulV4` 在 A5/DAV_3510 上的 MXFP8 主路径：
