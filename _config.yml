@@ -18,7 +18,8 @@ archive_dir: archives
 category_dir: categories
 code_dir: downloads/code
 i18n_dir: ':lang'
-skip_render: null
+skip_render:
+  - 'google44f1d3cdcc68a4ab.html'
 new_post_name: ':title.md'
 default_layout: post
 titlecase: false
