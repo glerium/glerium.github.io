@@ -103,7 +103,7 @@ $$\mathcal{H}_t(\mathbf{r}) = \frac{1}{|\mathbf{r}|} \sum_{t \in \mathbf{r}} \ma
 
 这里ECS只考虑Copying head上的分数。
 
-> 感觉这里做的有点草率了，直接对所有layer和head的PCS, ECS进行平均，回归分析的鲁棒性不足
+> 感觉这里做的有点草率了，直接对所有选中的layer和head的PCS, ECS进行平均，回归分析的鲁棒性不足
 
 ### chunk-level的ReDeEP
 
