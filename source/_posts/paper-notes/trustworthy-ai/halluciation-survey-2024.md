@@ -1,6 +1,6 @@
 ---
 layout: blog
-title: "[论文笔记] A Survey on Hallucination in Large Language Models: Principles, Taxonomy, Challenges, and Open Questions (2024.11, ACM TOIS)"
+title: "[论文笔记] A Survey on Hallucination in Large Language Models: Principles, Taxonomy, Challenges, and Open Questions (2024.11, ACM TOIS 2026)"
 date: 2026/09/05
 tags:
   - 幻觉检测
