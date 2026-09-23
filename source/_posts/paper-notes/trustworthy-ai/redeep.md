@@ -1,6 +1,6 @@
 ---
 layout: blog
-title: "[论文笔记] ReDeEP: Detecting Hallucination in Retrieval-Augmented Generation via Mechanistic Interpretability (2025.01)"
+title: "[论文笔记] ReDeEP: Detecting Hallucination in Retrieval-Augmented Generation via Mechanistic Interpretability (2025.01, ICLR 2025)"
 date: 2026/06/29 18:12
 tags:
   - 检索头
