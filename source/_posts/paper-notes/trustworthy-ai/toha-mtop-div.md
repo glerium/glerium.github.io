@@ -1,6 +1,6 @@
 ---
 layout: blog
-title: "[论文笔记] Hallucination Detection in LLMs with Topological Divergence on Attention Graphs (2026.07, ACL2026)"
+title: "[论文笔记] Hallucination Detection in LLMs with Topological Divergence on Attention Graphs (2026.07, ACL 2026)"
 date: 2026/09/17 18:31
 tags:
   - 幻觉检测
