@@ -1,6 +1,6 @@
 ---
 layout: blog
-title: "[论文笔记] Query-Focused Retrieval Heads Improve Long-Context Reasoning and Re-ranking (2025.09)"
+title: "[论文笔记] Query-Focused Retrieval Heads Improve Long-Context Reasoning and Re-ranking (2025.09, ACL 2025)"
 date: 2026/06/15 17:00
 tags:
   - 检索头
