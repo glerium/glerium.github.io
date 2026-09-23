@@ -1,6 +1,6 @@
 ---
 layout: blog
-title: "[论文笔记] Toward Faithful Retrieval-Augmented Generation with Sparse Autoencoders (2026.02)"
+title: "[论文笔记] Toward Faithful Retrieval-Augmented Generation with Sparse Autoencoders (2026.02, ICLR 2026)"
 date: 2026/07/18 12:33
 tags:
   - 可信生成
