@@ -1,6 +1,6 @@
 ---
 layout: blog
-title: "[论文笔记] Retrieval Head Mechanistically Explains Long-Context Factuality (2024.04)"
+title: "[论文笔记] Retrieval Head Mechanistically Explains Long-Context Factuality (2024.04, ICLR 2025)"
 date: 2026/06/08 15:20
 tags:
   - 检索头
